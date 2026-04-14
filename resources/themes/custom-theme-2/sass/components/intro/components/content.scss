@@ -1,0 +1,286 @@
+
+
+/*------------------------------------------------------------------
+
+[Table of contents]
+
+    Content
+
+-------------------------------------------------------------------*/
+
+/*----*****---- << Content >> ----*****----*/
+
+.l-content--wrapper {
+    height: 100%;
+}
+
+.c-content {
+    position: relative;
+    z-index: 2;
+    padding-bottom: 110px;
+    height: 100%;
+    font-weight: 300;
+    color: $color-intro-content;
+
+    @include grid($to: "xs") {
+        padding-bottom: 90px;
+    }
+
+    @include grid($only: "sm") {
+        padding-bottom: 95px;
+    }
+
+    @include grid($only: "md") {
+        padding-bottom: 100px;
+    }
+
+    @include grid($only: "lg") {
+        padding-bottom: 105px;
+    }
+}
+
+.c-content--inner {
+    @include flexDisplay(flex);
+    @include justifyContent(space-between);
+    margin-top: auto;
+
+    @include grid($to: "md") {
+        @include flexDirection(column);
+        @include justifyContent(flex-start);
+    }
+
+    @include grid($only: "md") {
+        max-width: 640px;
+    }
+
+    @include grid($only: "lg") {
+        @include justifyContent(initial);
+    }
+
+    @include grid($only: "xl") {
+        @include justifyContent(flex-start);
+    }
+}
+
+.c-content--left,
+.c-content--right {
+    opacity: 0;
+    @include transitionAnim(opacity 0.6s cubic-bezier(0.28, 0.12, 0.22, 1));
+    @include transitionProperty(opacity, transform);
+    @include transform(translate(0, 100%));
+}
+
+.c-content--right {
+    margin: auto 0;
+    padding-top: 15px;
+
+    @include grid($to: "md") {
+        padding-top: 0;
+    }
+
+    @include grid($only: "xl") {
+        margin-left: 30px;
+    }
+
+    @include grid($only: "2xl") {
+        margin-right: 40px;
+    }
+}
+
+.content__title {
+    width: 800px;
+    font-size: 88px;
+    line-height: 1.25;
+    font-weight: 500;
+
+    @include grid($to: "xs") {
+        margin-bottom: 21px;
+        width: 100%;
+        font-size: 50px;
+    }
+
+    @include grid($only: "sm") {
+        margin-bottom: 23px;
+        width: 100%;
+        font-size: 58px;
+    }
+
+    @include grid($only: "md") {
+        margin-bottom: 25px;
+        width: 590px;
+        font-size: 62px;
+    }
+
+    @include grid($only: "lg") {
+        width: 580px;
+        font-size: 64px;
+    }
+
+    @include grid($only: "xl") {
+        width: 700px;
+        font-size: 75px;
+    }
+
+    @include grid($only: "2xl") {
+        font-size: 84px;
+    }
+}
+
+.content__desc {
+    margin-bottom: 20px;
+    width: 360px;
+    font-size: 17px;
+    line-height: 1.7;
+
+    @include grid($to: "xs") {
+        margin-bottom: 21px;
+        width: 100%;
+        font-size: 15px;
+    }
+
+    @include grid($only: "sm") {
+        margin-bottom: 23px;
+        font-size: 16px;
+    }
+
+    @include grid($only: "md") {
+        margin-bottom: 25px;
+        font-size: 16.5px;
+    }
+
+    @include grid($only: "lg") {
+        width: 320px;
+        font-size: 15px;
+    }
+
+    @include grid($only: "xl") {
+        font-size: 16px;
+    }
+
+    @include grid($only: "2xl") {
+        font-size: 16.5px;
+    }
+}
+
+.c-content__buttons {
+    @include flexDisplay(flex);
+}
+
+.content__btn--gti {
+    margin-right: 32px;
+    padding: 17px 32px;
+    font-size: 16px;
+    line-height: 1;
+    letter-spacing: 0.3px;
+    color: $color-intro-content-btn-gti;
+    background-color: $bg-color-intro-content-btn-gti;
+    border: 2px solid $border-color-intro-content-btn-gti;
+    border-radius: 8px;
+    @include transitionAnim(all 0.3s ease);
+
+    @include grid($to: "xs") {
+        margin-right: 24px;
+        padding: 14px 25px;
+        font-size: 14px;
+    }
+
+    @include grid($only: "sm") {
+        margin-right: 27px;
+        padding: 15px 28px;
+        font-size: 15px;
+    }
+
+    @include grid($only: "md") {
+        margin-right: 30px;
+        padding: 16px 30px;
+        font-size: 16px;
+    }
+
+    @include grid($only: "lg") {
+        padding: 15px 28px;
+        font-size: 15px;
+    }
+
+    @include grid($only: "xl") {
+        padding: 16px 30px;
+        font-size: 16px;
+    }
+
+    @include grid($only: "2xl") {
+        padding: 16px 30px;
+        font-size: 16.5px;
+    }
+}
+
+.content__btn--gti:hover{
+    background-color: $bg-color-intro-content-btn-gti-hover;
+    border-color: $border-color-intro-content-btn-gti-hover;
+}
+
+.c-content__btn--video {
+    @include flexDisplay(flex);
+    @include justifyContent(center);
+    @include alignItems(center);
+    width: 54px;
+    height: 54px;
+    background-color: $bg-color-intro-content-btn-video;
+    border-radius: 50%;
+    @include transitionAnim(all 0.3s ease-in-out);
+
+    @include grid($to: "xs") {
+        width: 46px;
+        height: 46px;
+    }
+
+    @include grid($only: "sm") {
+        width: 49px;
+        height: 49px;
+    }
+
+    @include grid($only: "md") {
+        width: 52px;
+        height: 52px;
+    }
+
+    @include grid($only: "lg") {
+        width: 49px;
+        height: 49px;
+    }
+
+    @include grid($only: "xl") {
+        width: 52px;
+        height: 52px;
+    }
+
+    @include grid($only: "2xl") {
+        width: 53px;
+        height: 53px;
+    }
+}
+
+.c-content__btn--video:hover {
+    background-color: $bg-color-intro-content-btn-video-hover;
+}
+
+.btn-video__icon {
+    font-size: 16px;
+    color: $color-intro-content-btn-video-icon;
+
+    @include grid($to: "xs") {
+        font-size: 14px;
+    }
+
+    @include grid($only: "sm") {
+        font-size: 15px;
+    }
+
+    @include grid($only: "lg") {
+        font-size: 15px;
+    }
+}
+
+.c-content__btn--video:hover .btn-video__icon {
+    color: $color-intro-content-btn-video-icon-hover;
+}
+
+/*----*****---- << End content >> ----*****----*/

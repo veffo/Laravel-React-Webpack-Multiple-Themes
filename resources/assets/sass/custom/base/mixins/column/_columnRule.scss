@@ -1,0 +1,17 @@
+/*------------------------------------------------------------------
+
+[Table of contents]
+
+    Column rule
+
+-------------------------------------------------------------------*/
+
+/*----*****---- << Column rule >> ----*****----*/
+
+@mixin columnRule($value) {
+    -webkit-column-rule: $value;
+    -moz-column-rule: $value;
+    column-rule: $value;
+}
+
+/*----*****---- << End column rule >> ----*****----*/

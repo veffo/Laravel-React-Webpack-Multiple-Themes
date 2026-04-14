@@ -1,0 +1,17 @@
+/*------------------------------------------------------------------
+
+[Table of contents]
+
+    Box decoration break
+
+-------------------------------------------------------------------*/
+
+/*----*****---- << Box decoration break >> ----*****----*/
+
+@mixin boxDecorationBreak($value) {
+    -webkit-box-decoration-break: $value;
+    -o-box-decoration-break: $value;
+    box-decoration-break: $value;
+}
+
+/*----*****---- << End box decoration break >> ----*****----*/

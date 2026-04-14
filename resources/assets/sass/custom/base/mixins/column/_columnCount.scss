@@ -1,0 +1,17 @@
+/*------------------------------------------------------------------
+
+[Table of contents]
+
+    Column count
+
+-------------------------------------------------------------------*/
+
+/*----*****---- << Column count >> ----*****----*/
+
+@mixin columnCount($value) {
+    -webkit-column-count: $value;
+    -moz-column-count: $value;
+    column-count: $value;
+}
+
+/*----*****---- << End column count >> ----*****----*/

@@ -1,0 +1,18 @@
+/*------------------------------------------------------------------
+
+[Table of contents]
+
+    Flex flow
+
+-------------------------------------------------------------------*/
+
+/*----*****---- << Flex flow >> ----*****----*/
+
+@mixin flexFlow($flow: (row nowrap), $important: null) {
+    -webkit-flex-flow: $flow $important;
+    -moz-flex-flow: $flow $important;
+    -ms-flex-flow: $flow $important;
+    flex-flow: $flow $important;
+}
+
+/*----*****---- << End flex flow >> ----*****----*/

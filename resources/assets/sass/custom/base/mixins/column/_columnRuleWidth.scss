@@ -1,0 +1,17 @@
+/*------------------------------------------------------------------
+
+[Table of contents]
+
+    Column rule width
+
+-------------------------------------------------------------------*/
+
+/*----*****---- << Column rule width >> ----*****----*/
+
+@mixin columnRuleWidth($value) {
+    -webkit-column-rule-width: $value;
+    -moz-column-rule-width: $value;
+    column-rule-width: $value;
+}
+
+/*----*****---- << End column rule width >> ----*****----*/

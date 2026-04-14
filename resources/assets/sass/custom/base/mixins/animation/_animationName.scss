@@ -1,0 +1,19 @@
+/*------------------------------------------------------------------
+
+[Table of contents]
+
+    Animation name
+
+-------------------------------------------------------------------*/
+
+/*----*****---- << Animation name >> ----*****----*/
+
+@mixin animationName($value) {
+    -webkit-animation-name: $value;
+    -moz-animation-name: $value;
+    -ms-animation-name: $value;
+    -o-animation-name: $value;
+    animation-name: $value;
+}
+
+/*----*****---- << End animation name >> ----*****----*/

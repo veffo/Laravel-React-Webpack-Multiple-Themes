@@ -1,0 +1,17 @@
+/*------------------------------------------------------------------
+
+[Table of contents]
+
+    Text overflow
+
+-------------------------------------------------------------------*/
+
+/*----*****---- << Text overflow >> ----*****----*/
+
+@mixin textOverflow($value) {
+    -ms-text-overflow: $value;
+    -o-text-overflow: $value;
+    text-overflow: $value;
+}
+
+/*----*****---- << End text overflow >> ----*****----*/

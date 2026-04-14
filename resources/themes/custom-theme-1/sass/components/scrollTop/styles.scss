@@ -1,0 +1,107 @@
+/*------------------------------------------------------------------
+
+[Table of contents]
+
+    Scroll to top
+
+-------------------------------------------------------------------*/
+
+/*----*****---- << Scroll to top >> ----*****----*/
+
+.c-arrowToTop {
+    position: fixed;
+    z-index: 2;
+    right: 40px;
+    bottom: 60px;
+    visibility: hidden;
+    opacity: 0;
+    @include transform(translate(0, 200%));
+    @include transitionAnim(all 0.5s ease-in-out);
+
+    @include grid($to: "xs") {
+        bottom: 40px;
+        right: 15px;
+    }
+
+    @include grid($only: "sm") {
+        bottom: 44px;
+        right: 20px;
+    }
+
+    @include grid($only: "md") {
+        bottom: 48px;
+        right: 25px;
+    }
+
+    @include grid($only: "lg") {
+        bottom: 52px;
+        right: 30px;
+    }
+
+    @include grid($only: "xl") {
+        bottom: 56px;
+        right: 35px;
+    }
+
+    .c-arrowToTop__link {
+        @include flexDisplay(flex);
+        @include justifyContent(center);
+        @include alignItems(center);
+        width: 60px;
+        height: 60px;
+        font-size: 18px;
+        color: $color-arrowToTop-link;
+        background-color: $bg-color-arrowToTop-link;
+        border-radius: 50%;
+        @include transitionAnim(all 0.3s ease);
+
+        @include grid($to: "xs") {
+            width: 46px;
+            height: 46px;
+            font-size: 14px;
+        }
+
+        @include grid($only: "sm") {
+            width: 48px;
+            height: 48px;
+            font-size: 15px;
+        }
+
+        @include grid($only: "md") {
+            width: 50px;
+            height: 50px;
+            font-size: 16px;
+        }
+
+        @include grid($only: "lg") {
+            width: 54px;
+            height: 54px;
+            font-size: 16.5px;
+        }
+
+        @include grid($only: "xl") {
+            width: 56px;
+            height: 56px;
+            font-size: 17px;
+        }
+
+        @include grid($only: "2xl") {
+            width: 58px;
+            height: 58px;
+            font-size: 17.5px;
+        }
+    }
+
+    .c-arrowToTop__link:hover,
+    .c-arrowToTop__link:focus {
+        background-color: $bg-color-arrowToTop-link-hover;
+    }
+}
+
+.c-arrowToTop.is-visible {
+    visibility: visible;
+    opacity: 1;
+    @include transform(translate(0, 0));
+}
+
+/*----*****---- << End scroll to top >> ----*****----*/

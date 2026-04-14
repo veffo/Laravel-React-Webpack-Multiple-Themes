@@ -1,0 +1,38 @@
+/*------------------------------------------------------------------
+
+[Table of contents]
+
+    Scrollbar buttons
+
+-------------------------------------------------------------------*/
+
+/*----*****---- << Scrollbar buttons >> ----*****----*/
+
+@mixin scrollbarBtn($horInc: null, $horDec: null, $verInc: null, $verDec: null) {
+    // Styling of both the up & down and left & right buttons of a scrollbar
+    #{$element}::-webkit-scrollbar-button {
+        @content;
+    }
+
+    // The special selector for the increment (left) button of the horizontal scrollbar. In this case we define a specific arrow-button as background of this button
+    #{$element}::-webkit-scrollbar-button:horizontal:increment {
+        background: $horInc;
+    }
+
+    // The selector for the decrement (right) button of the horizontal list
+    #{$element}::-webkit-scrollbar-button:horizontal:decrement {
+        background: $horDec;
+    }
+
+    // The special selector for the increment (down) button of the vertical scrollbar. In this case we define a specific arrow-button as background of this button
+    #{$element}::-webkit-scrollbar-button:vertical:increment {
+        background: $verInc;
+    }
+
+    // The selector for the decrement (up) button of the vertical list
+    #{$element}::-webkit-scrollbar-button:vertical:decrement {
+        background: $verDec;
+    }
+}
+
+/*----*****---- << End scrollbar buttons >> ----*****----*/

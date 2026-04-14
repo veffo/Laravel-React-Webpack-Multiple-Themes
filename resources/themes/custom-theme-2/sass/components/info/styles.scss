@@ -1,0 +1,49 @@
+/*------------------------------------------------------------------
+
+[Table of contents]
+
+    Info
+        Navigation tab list
+        Content tabs
+
+-------------------------------------------------------------------*/
+
+/*----*****---- << Info >> ----*****----*/
+
+.c-info {
+    position: relative;
+    padding: 140px 0;
+    width: 100%;
+    font-size: 18px;
+    line-height: 1.8;
+    background-color: $bg-color-info;
+
+    @include grid($to: "xs") {
+        padding: 90px 15px;
+    }
+
+    @include grid($only: "sm") {
+        padding: 100px 0;
+    }
+
+    @include grid($only: "md") {
+        padding: 110px 0;
+    }
+
+    @include grid($only: "lg") {
+        padding: 120px 0;
+    }
+
+    @include grid($only: "xl") {
+        padding: 130px 0;
+    }
+
+    @include grid($only: "2xl") {
+        padding: 135px 0;
+    }
+
+    @import "components/tabNav";
+    @import "components/contentTab";
+}
+
+/*----*****---- << End info >> ----*****----*/

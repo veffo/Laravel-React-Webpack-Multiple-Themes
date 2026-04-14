@@ -1,0 +1,141 @@
+/*------------------------------------------------------------------
+
+[Table of contents]
+
+    Global
+        Preloader
+        Padding section mobile
+
+-------------------------------------------------------------------*/
+
+/*----*****---- << Global >> ----*****----*/
+
+body,
+html {
+    @include transition(all ease 0.5s);
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: $font-family;
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+    color: $color-body;
+    background: $bg-color-body;
+    min-width: 320px;
+    max-width: 100vw;
+}
+
+/*----*****---- << End global >> ----*****----*/
+
+/*----*****---- << Preloader >> ----*****----*/
+
+.is-loading body {
+    position: fixed;
+    @include overflowY(scroll);
+}
+
+.c-preloader {
+    position: fixed;
+    display: flex;
+    z-index: 100;
+    @include justifyContent(center);
+    @include alignItems(center);
+    height: 100vh;
+    width: 100%;
+    background-color: $bg-color-preloader;
+}
+
+.loader {
+    width: 50px;
+    height: 50px;
+
+    @include grid($from: "2xs", $to: "sm") {
+        width: 45px;
+        height: 45px;
+    }
+}
+
+.loader::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-width: 4px;
+    border-style: solid;
+    border-color: $border-top-color-preloader-loader-before $border-right-color-preloader-loader-before $border-bottom-color-preloader-loader-before $border-left-color-preloader-loader-before;
+    border-radius: 50%;
+    @include animation(load 1.1s linear infinite);
+
+    @include grid($from: "2xs", $to: "sm") {
+        border-width: 3px;
+    }
+}
+
+@include keyframes(load) {
+    0% {
+        @include transform(rotate(0deg));
+    }
+
+    100% {
+        @include transform(rotate(360deg));
+    }
+}
+
+.is-loaded .c-preloader {
+    visibility: hidden;
+    opacity: 0;
+    @include transition(all 0.6s ease-in-out 0.9s);
+}
+
+.is-loaded .c-preloader .loader {
+    opacity: 0;
+    @include transition(opacity ease-in-out 0.6s);
+}
+
+/*----*****---- << End preloader >> ----*****----*/
+
+/*----*****---- << Padding section mobile >> ----*****----*/
+
+@media (max-width: 575px) {
+    .g-pdMobile {
+        padding: 0 15px 0 15px;
+    }
+}
+
+/*----*****---- << End padding section mobile >> ----*****----*/
+
+/*----*****---- << Default text >> ----*****----*/
+
+.g-text--default {
+    font-size: 18px;
+
+    @include grid($to: "xs") {
+        font-size: 15px;
+    }
+
+    @include grid($only: "sm") {
+        font-size: 16px;
+    }
+
+    @include grid($only: "md") {
+        font-size: 16.5px;
+    }
+
+    @include grid($only: "lg") {
+        font-size: 16px;
+    }
+
+    @include grid($only: "xl") {
+        font-size: 17px;
+    }
+
+    @include grid($only: "2xl") {
+        font-size: 17.5px;
+    }
+}
+
+/*----*****---- << End default text >> ----*****----*/

@@ -1,0 +1,26 @@
+/*------------------------------------------------------------------
+
+[Table of contents]
+
+    Functions
+        Mathematical
+            Square root
+            Value px to em
+            Value px to rem
+        Value if
+
+-------------------------------------------------------------------*/
+
+/*----*****---- << Functions >> ----*****----*/
+
+// mathematical
+@import "functions/sqrt";
+@import "functions/toEm";
+@import "functions/toRem";
+// end mathematical
+
+// other
+@import "functions/valueif";
+// end other
+
+/*----*****---- << End functions >> ----*****----*/

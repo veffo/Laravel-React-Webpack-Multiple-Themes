@@ -1,0 +1,23 @@
+/*------------------------------------------------------------------
+
+[Table of contents]
+
+    Rotate
+
+-------------------------------------------------------------------*/
+
+/*----*****---- << Rotate >> ----*****----*/
+
+@mixin rotate($value) {
+    -webkit-transform: rotate(#{$value}deg);
+    -moz-transform: rotate(#{$value}deg);
+    -ms-transform: rotate(#{$value}deg);
+    -o-transform: rotate(#{$value}deg);
+    transform: rotate(#{$value}deg);
+
+    -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=#{cos($value)}, M12=#{-1*sin($value)}, M21=#{sin($value)}, M22=#{cos($value)})";
+    filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=#{cos($value)}, M12=#{-1*sin($value)}, M21=#{sin($value)}, M22=#{cos($value)});
+    zoom: 1;
+}
+
+/*----*****---- << End rotate >> ----*****----*/

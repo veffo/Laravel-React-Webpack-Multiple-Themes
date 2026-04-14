@@ -1,0 +1,18 @@
+/*------------------------------------------------------------------
+
+[Table of contents]
+
+    Border bottom right radius
+
+-------------------------------------------------------------------*/
+
+/*----*****---- << Border bottom right radius >> ----*****----*/
+
+@mixin borderBottomRightRadius($value) {
+    -webkit-border-bottom-right-radius: $value;
+    -moz-border-bottom-right-radius: $value;
+    -ms-border-bottom-right-radius: $value;
+    border-bottom-right-radius: $value;
+}
+
+/*----*****---- << End border bottom right radius >> ----*****----*/

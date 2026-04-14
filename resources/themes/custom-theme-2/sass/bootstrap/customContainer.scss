@@ -1,0 +1,86 @@
+/*------------------------------------------------------------------
+
+[Table of contents]
+
+    Custom container
+
+-------------------------------------------------------------------*/
+
+/*----*****---- << Custom container >> ----*****----*/
+
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: $pdContainer;
+    padding-left: $pdContainer;
+    width: 100%;
+    max-width: 1600px;
+}
+
+@media (max-width: 575px) {
+    .container {
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1399px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+@media (min-width: 1400px) and (max-width: 1599px) {
+    .container {
+        max-width: 1320px;
+    }
+}
+
+@media (min-width: 1600px) and (max-width: 1799px) {
+    .container {
+        max-width: 1360px;
+    }
+}
+
+@media (min-width: 1800px) and (max-width: 1999px) {
+    .container {
+        max-width: 1420px;
+    }
+}
+
+@media (min-width: 2000px) and (max-width: 2199px) {
+    .container {
+        max-width: 1480px;
+    }
+}
+
+@media (min-width: 2200px) and (max-width: 2399px) {
+    .container {
+        max-width: 1540px;
+    }
+}
+
+@media (min-width: 2400px) and (max-width: 2599px) {
+    .container {
+        max-width: 1600px;
+    }
+}
+
+/*----*****---- << End custom container >> ----*****----*/

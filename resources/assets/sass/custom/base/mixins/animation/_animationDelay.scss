@@ -1,0 +1,19 @@
+/*------------------------------------------------------------------
+
+[Table of contents]
+
+    Animation delay
+
+-------------------------------------------------------------------*/
+
+/*----*****---- << Animation delay >> ----*****----*/
+
+@mixin animationDelay($value) {
+    -webkit-animation-delay: $value;
+    -moz-animation-delay: $value;
+    -ms-animation-delay: $value;
+    -o-animation-delay: $value;
+    animation-delay: $value;
+}
+
+/*----*****---- << End animation delay >> ----*****----*/

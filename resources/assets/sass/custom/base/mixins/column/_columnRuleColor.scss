@@ -1,0 +1,17 @@
+/*------------------------------------------------------------------
+
+[Table of contents]
+
+    Column rule color
+
+-------------------------------------------------------------------*/
+
+/*----*****---- << Column rule color >> ----*****----*/
+
+@mixin columnRuleColor($value) {
+    -webkit-column-rule-color: $value;
+    -moz-column-rule-color: $value;
+    column-rule-color: $value;
+}
+
+/*----*****---- << End column rule color >> ----*****----*/

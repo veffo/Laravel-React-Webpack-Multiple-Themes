@@ -1,0 +1,17 @@
+/*------------------------------------------------------------------
+
+[Table of contents]
+
+    Backface visibility
+
+-------------------------------------------------------------------*/
+
+/*----*****---- << Backface visibility >> ----*****----*/
+
+@mixin backfaceVisibility($value) {
+    -webkit-backface-visibility: $value;
+    -moz-backface-visibility: $value;
+    backface-visibility: $value;
+}
+
+/*----*****---- << End backface visibility >> ----*****----*/

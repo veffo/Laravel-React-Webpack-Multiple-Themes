@@ -1,0 +1,19 @@
+/*------------------------------------------------------------------
+
+[Table of contents]
+
+    Crossbrowser property
+
+-------------------------------------------------------------------*/
+
+/*----*****---- << Crossbrowser property >> ----*****----*/
+
+@mixin crossBrowser($property, $cssValue) {
+    -webkit-#{$property}: $cssValue;
+    -moz-#{$property}: $cssValue;
+    -ms-#{$property}: $cssValue;
+    -o-#{$property}: $cssValue;
+    #{$property}: $cssValue;
+}
+
+/*----*****---- << End crossbrowser property >> ----*****----*/

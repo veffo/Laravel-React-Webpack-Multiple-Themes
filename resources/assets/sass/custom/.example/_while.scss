@@ -1,0 +1,56 @@
+/*------------------------------------------------------------------
+
+[Table of contents]
+
+    Cycle while
+
+-------------------------------------------------------------------*/
+
+/*----*****---- << Cycle while >> ----*****----*/
+
+$valueWidth: 5;
+$max: 30;
+
+@while ($valueWidth <= $max) {
+    .example-#{$valueWidth} {
+        width: $valueWidth + "px";
+    }
+
+    $valueWidth: $valueWidth + 5;
+}
+
+.example-5 {
+    width: 5px;
+}
+
+.example-10 {
+    width: 10px;
+}
+
+@function fontFunc($num) {
+    $a: 0;
+    $b: 1;
+
+    @while ($num > 0) {
+        $temp: $b;
+        $b: $b + $a;
+        $a: $temp;
+        $num: $num - 1;
+    }
+
+    @return $a + "px";
+}
+
+.example {
+    // 0, 1, 1, 2, 3, 5, 8, 13, 21, ...
+    font-size: fontFunc(0);
+    font-size: fontFunc(1);
+    font-size: fontFunc(2);
+    font-size: fontFunc(3);
+    font-size: fontFunc(4);
+    font-size: fontFunc(5);
+    font-size: fontFunc(6);
+    font-size: fontFunc(7);
+}
+
+/*----*****---- << End cycle while >> ----*****----*/

@@ -1,0 +1,19 @@
+/*------------------------------------------------------------------
+
+[Table of contents]
+
+    Transition delay
+
+-------------------------------------------------------------------*/
+
+/*----*****---- << Transition delay >> ----*****----*/
+
+@mixin transitionDelay($value...) {
+    -webkit-transition-delay: $value;
+    -moz-transition-delay: $value;
+    -ms-transition-delay: $value;
+    -o-transition-delay: $value;
+    transition-delay: $value;
+}
+
+/*----*****---- << End transition delay >> ----*****----*/

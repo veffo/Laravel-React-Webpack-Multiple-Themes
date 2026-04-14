@@ -1,0 +1,18 @@
+/*------------------------------------------------------------------
+
+[Table of contents]
+
+    Background size
+
+-------------------------------------------------------------------*/
+
+/*----*****---- << Background size >> ----*****----*/
+
+@mixin backgroundSize($value) {
+    -webkit-background-size: $value;
+    -moz-background-size: $value;
+    -o-background-size: $value;
+    background-size: $value;
+}
+
+/*----*****---- << End background size >> ----*****----*/

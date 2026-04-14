@@ -1,0 +1,40 @@
+/*------------------------------------------------------------------
+
+[Table of contents]
+
+    Flex direction
+
+-------------------------------------------------------------------*/
+
+/*----*****---- << Flex direction >> ----*****----*/
+
+@mixin flexDirection($direction: row, $important: null) {
+    -webkit-flex-direction: $direction $important;
+
+    @if($direction == "row-reverse") {
+        -webkit-box-direction: reverse $important;
+        -webkit-box-orient: horizontal $important;
+        -moz-box-direction: reverse $important;
+        -moz-box-orient: horizontal $important;
+    } @else if($direction == "column") {
+        -webkit-box-direction: normal $important;
+        -webkit-box-orient: vertical $important;
+        -moz-box-direction: normal $important;
+        -moz-box-orient: vertical $important;
+    } @else if($direction == "column-reverse") {
+        -webkit-box-direction: reverse $important;
+        -webkit-box-orient: vertical $important;
+        -moz-box-direction: reverse $important;
+        -moz-box-orient: vertical $important;
+    } @else {
+        -webkit-box-direction: normal $important;
+        -webkit-box-orient: horizontal $important;
+        -moz-box-direction: normal $important;
+        -moz-box-orient: horizontal $important;
+    }
+
+    -ms-flex-direction: $direction $important;
+    flex-direction: $direction $important;
+}
+
+/*----*****---- << End flex direction >> ----*****----*/

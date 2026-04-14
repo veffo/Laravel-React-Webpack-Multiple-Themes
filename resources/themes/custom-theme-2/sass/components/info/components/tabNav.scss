@@ -1,0 +1,99 @@
+/*------------------------------------------------------------------
+
+[Table of contents]
+
+    Navigation tab list
+
+-------------------------------------------------------------------*/
+
+/*----*****---- << Tab list >> ----*****----*/
+
+.c-tab__nav {
+    margin-bottom: 64px;
+    font-size: 14px;
+    letter-spacing: 5px;
+
+    @include grid($to: "xs") {
+        margin-bottom: 40px;
+        font-size: 13px;
+        letter-spacing: 3px;
+    }
+
+    @include grid($only: "sm") {
+        margin-bottom: 44px;
+        font-size: 13px;
+        letter-spacing: 4px;
+    }
+
+    @include grid($only: "md") {
+        margin-bottom: 48px;
+        letter-spacing: 4px;
+    }
+
+    @include grid($only: "lg") {
+        margin-bottom: 52px;
+        letter-spacing: 4px;
+    }
+
+    @include grid($only: "xl") {
+        margin-bottom: 56px;
+    }
+
+    @include grid($only: "2xl") {
+        margin-bottom: 60px;
+    }
+
+    .tab-nav__list {
+        @include flexDisplay(flex);
+        @include justifyContent(space-between);
+    }
+
+    .tab-list__item {
+        width: 33%;
+        border: 1px solid $border-color-info-nav-tab-list-item;
+        border-radius: 5px;
+    }
+
+    .tab-list__item[data-tab-active] {
+        background-color: $bg-color-info-nav-tab-list-item-active;
+        @include transitionAnim(all 0.6s cubic-bezier(0.28, 0.12, 0.22, 1));
+    }
+
+    .tab-list__item[data-tab-active] .tab-list__link {
+        color: $color-info-nav-tab-list-item-active-text-link;
+        @include transitionAnim(all 0.6s cubic-bezier(0.28, 0.12, 0.22, 1));
+    }
+
+    .tab-list__link {
+        display: block;
+        padding: 14px 28px;
+
+        @include grid($to: "xs") {
+            padding: 9px 15px;
+            text-align: center;
+        }
+
+        @include grid($only: "sm") {
+            padding: 10px 15px;
+            text-align: center;
+        }
+
+        @include grid($only: "md") {
+            padding: 11px 28px;
+        }
+
+        @include grid($only: "lg") {
+            padding: 12px 28px;
+        }
+
+        @include grid($only: "xl") {
+            padding: 13px 28px;
+        }
+
+        @include grid($only: "2xl") {
+            padding: 14px 28px;
+        }
+    }
+}
+
+/*----*****---- << End tab list >> ----*****----*/

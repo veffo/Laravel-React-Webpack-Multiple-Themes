@@ -1,0 +1,18 @@
+/*------------------------------------------------------------------
+
+[Table of contents]
+
+    Border top right radius
+
+-------------------------------------------------------------------*/
+
+/*----*****---- << Border top right radius >> ----*****----*/
+
+@mixin borderTopRightRadius($value) {
+    -webkit-border-top-right-radius: $value;
+    -moz-border-top-right-radius: $value;
+    -ms-border-top-right-radius: $value;
+    border-top-right-radius: $value;
+}
+
+/*----*****---- << End border top right radius >> ----*****----*/

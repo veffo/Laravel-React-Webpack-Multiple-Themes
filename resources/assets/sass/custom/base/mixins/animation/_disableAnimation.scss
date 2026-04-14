@@ -1,0 +1,19 @@
+/*------------------------------------------------------------------
+
+[Table of contents]
+
+    Disable animation
+
+-------------------------------------------------------------------*/
+
+/*----*****---- << Disable animation >> ----*****----*/
+
+@mixin disableAnimation {
+    @include animation(none);
+    @include transitionAnim(none 0s 0s);
+    @include transform(none);
+
+    scroll-behavior: auto;
+}
+
+/*----*****---- << End disable animation >> ----*****----*/

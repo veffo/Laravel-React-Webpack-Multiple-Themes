@@ -1,0 +1,25 @@
+/*------------------------------------------------------------------
+
+[Table of contents]
+
+    Align content
+
+-------------------------------------------------------------------*/
+
+/*----*****---- << Align content >> ----*****----*/
+
+@mixin alignContent($align: stretch, $important: null) {
+    -webkit-align-content: $align;
+
+    @if($align == "flex-start") {
+        -ms-flex-line-pack: start $important;
+    } @else if($align == "flex-end") {
+        -ms-flex-line-pack: end $important;
+    } @else {
+        -ms-flex-line-pack: $align $important;
+    }
+
+    align-content: $align $important;
+}
+
+/*----*****---- << End align content >> ----*****----*/

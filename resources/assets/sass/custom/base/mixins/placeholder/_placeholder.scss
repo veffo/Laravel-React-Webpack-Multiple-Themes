@@ -1,0 +1,61 @@
+/*------------------------------------------------------------------
+
+[Table of contents]
+
+    Placeholder
+
+-------------------------------------------------------------------*/
+
+/*----*****---- << Placeholder >> ----*****----*/
+
+@mixin placeholder($element: null, $hover: null, $focus: null, $active: null) {
+    @if($element != null) {
+        #{$element} {
+            &::-webkit-input-placeholder,
+            &::-moz-placeholder,
+            &:-moz-placeholder,
+            &:-ms-input-placeholder,
+            &::placeholder {
+                @content;
+            }
+        }
+    }
+
+    @if(($element != null) and ($hover != null)) {
+        #{$element}:hover {
+            &::-webkit-input-placeholder,
+            &::-moz-placeholder,
+            &:-moz-placeholder,
+            &:-ms-input-placeholder,
+            &::placeholder {
+                @content;
+            }
+        }
+    }
+
+    @if(($element != null) and ($focus != null)) {
+        #{$element}:focus {
+            &::-webkit-input-placeholder,
+            &::-moz-placeholder,
+            &:-moz-placeholder,
+            &:-ms-input-placeholder,
+            &::placeholder {
+                @content;
+            }
+        }
+    }
+
+    @if(($element != null) and ($active != null)) {
+        #{$element}:active {
+            &::-webkit-input-placeholder,
+            &::-moz-placeholder,
+            &:-moz-placeholder,
+            &:-ms-input-placeholder,
+            &::placeholder {
+                @content;
+            }
+        }
+    }
+}
+
+/*----*****---- << End placeholder >> ----*****----*/

@@ -1,0 +1,19 @@
+/*------------------------------------------------------------------
+
+[Table of contents]
+
+    Transition timing function
+
+-------------------------------------------------------------------*/
+
+/*----*****---- << Transition timing function >> ----*****----*/
+
+@mixin transitionTimingFunction($value...) {
+    -webkit-transition-timing-function: $value;
+    -moz-transition-timing-function: $value;
+    -ms-transition-timing-function: $value;
+    -o-transition-timing-function: $value;
+    transition-timing-function: $value;
+}
+
+/*----*****---- << End transition timing function >> ----*****----*/

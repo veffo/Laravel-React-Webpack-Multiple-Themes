@@ -1,0 +1,19 @@
+/*------------------------------------------------------------------
+
+[Table of contents]
+
+    Animation direction
+
+-------------------------------------------------------------------*/
+
+/*----*****---- << Animation direction >> ----*****----*/
+
+@mixin animationDirection($value) {
+    -webkit-animation-direction: $value;
+    -moz-animation-direction: $value;
+    -ms-animation-direction: $value;
+    -o-animation-direction: $value;
+    animation-direction: $value;
+}
+
+/*----*****---- << End animation direction >> ----*****----*/

@@ -1,0 +1,18 @@
+/*------------------------------------------------------------------
+
+[Table of contents]
+
+    Border image
+
+-------------------------------------------------------------------*/
+
+/*----*****---- << Border image >> ----*****----*/
+
+@mixin borderImage($value) {
+    -webkit-border-image: $value;
+    -moz-border-image: $value;
+    -o-border-image: $value;
+    border-image: $value;
+}
+
+/*----*****---- << End border image >> ----*****----*/

@@ -1,0 +1,629 @@
+/*------------------------------------------------------------------
+
+[Table of contents]
+
+    Custom BEM naming
+    Order of properties
+    Examples
+        Sass
+            Common
+            Calculations
+            Parent selector
+            No limit arguments
+            Insert content
+            Grid
+            Response grid
+
+-------------------------------------------------------------------*/
+
+/*----*****---- << Custom BEM naming >> ----*****----*/
+
+// Schema prefix: g-blockName
+
+// is-, has- (state) -> is-animated  - state object
+// g- (global)       -> g-hidden     - for global classes
+// u- (utilities)    -> u-float-left - overrides or helper classes
+// v- (vendor)       -> v-opacity    - crossbrowser prefix -> -moz-opacity: 0.5;
+// c- (container)    -> c-sidebar    - container for element
+// l- (layout)       -> l-content    - only position, display, width, height -> not visual properties
+// h- (holster)      -> h-header     - only visual properties (shadow, background, padding, ...)
+// o- (object)       -> o-preview    - independent small building blocks of the site
+// b- (block)        -> b-menu       - to select elements
+// js- (javascript)  -> js-carousel  - to select elements for js handlers
+// _                 -> _active      - additional classes to this object
+
+
+// Schema: blockName__elemName--modName-modVal _active
+
+.navMenu__item--textBottom-red {
+    display: block;
+}
+
+.navMenu__item--textBottom-red._active {
+    display: block;
+}
+
+// Example
+
+/*
+<div class="g-visible is-loaded">
+    <div class="c-page">
+        <div class="l-slider">
+            <div class="h-block b-slider">
+                <div class="slider__list">
+                    <div class="js-scroll slider__item _active">
+                        <div class="slider__info">
+                            <div class="slider__text">
+                                <div class="text__header">
+                                    Lorem ipsum
+                                </div>
+                                <div class="u-float-left text">
+                                    Lorem ipsum
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider__img--wrapper">
+                            <img class="slider__img" src="img/slider-1.png" />
+                        </div>
+                    </div>
+                    <div class="slider__item">
+                        <div class="slider__info">
+                            <div class="slider__text">
+                                <div class="text__header">
+                                    Lorem ipsum
+                                </div>
+                                <div class="u-float-left text">
+                                    Lorem ipsum
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider__img--wrapper">
+                            <img class="slider__img" src="img/slider-2.png" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+*/
+
+/*----*****---- << End custom BEM naming >> ----*****----*/
+
+/*----*****---- << Order of properties >> ----*****----*/
+
+.declaration-order {
+    /* Insert content */
+    content: "";
+    inset: 0;
+
+    /* Positioning */
+    position: absolute;
+    display: block; // box-model
+    z-index: 100;
+    flex: 1 1 320px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 320px;
+    flex-direction: column;
+    flex-flow: column;
+    flex-wrap: wrap;
+    float: right;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    /* Box-model */
+    justify-content: center;
+    justify-items: center;
+    justify-self: center;
+    direction: ltr;
+    order: 2;
+    align-content: flex-start;
+    align-items: center;
+    align-self: center;
+    vertical-align: middle;
+    object-position: center top;
+    object-fit: cover;
+    clear: none;
+    gap: 3px;
+    row-gap: 0;
+    column-gap: 0;
+    margin: 20px;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    padding: 20px;
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    page-break-after: auto;
+    tab-size: 4;
+    cx: 10;
+    cy: 10;
+    r: 10;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 100%;
+    max-width: 100%;
+    height: calc(100vh - 0px);
+    min-height: 100%;
+    max-height: 100%;
+
+    /* Typography */
+    font: normal 13px/1.5 700 "Helvetica", "Arial", sans-serif; // font: normal 13px/1.5 "Helvetica", "Tahoma", sans-serif;
+    font-style: normal;
+    font-size: 13px;
+    font-size-adjust: none;
+    font-stretch: normal;
+    line-height: 1.5;
+    font-weight: 700;
+    font-family: "Helvetica", "Arial", sans-serif; // font-family: "Helvetica", "Tahoma", sans-serif;
+    font-variant: normal;
+    // font-effect
+    // font-emphasize
+    // font-emphasize-position
+    // font-emphasize-style
+    // font-smooth
+    letter-spacing: normal;
+    text-align: start;
+    text-decoration: none;
+    text-transform: none;
+    text-rendering: optimizeSpeed;
+    -webkit-tap-highlight-color: initial;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+    text-size-adjust: 100%;
+    hyphens: none;
+    quotes: initial;
+    white-space: normal;
+    word-spacing: normal;
+    word-wrap: break-word;
+    src: url("path/font.woff");
+
+    /* Visual */
+    visibility: hidden;
+    overflow: visible;
+    overflow-anchor: auto;
+    overflow-block: visible;
+    overflow-clip-margin: 20px;
+    overflow-inline: visible;
+    overflow-wrap: normal;
+    overflow-x: hidden;
+    overflow-y: auto;
+    appearance: none;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    list-style: none;
+    list-style-image: none;
+    list-style-position: outside;
+    color: #999999;
+    background: #e6e6e6;
+    background-attachment: fixed;
+    background-clip: border-box;
+    background-color: #e6e6e6;
+    background-image: url($basePathImage + "images/icon.svg");
+    background-origin: border-box;
+    background-position: center;
+    background-position-x: center;
+    background-position-y: center;
+    background-repeat: no-repeat;
+    -webkit-background-size: 90px, 120px, 120px 90px, 120px, 120px;
+    -moz-background-size: 90px, 120px, 120px;
+    -o-background-size: 90px, 120px, 120px;
+    background-size: 90px, 120px, 120px;
+    outline: 1px solid #cccccc;
+    outline-offset: 4px;
+    outline-width: 1px;
+    outline-style: solid;
+    outline-color: #cccccc;
+    border: 1px solid #333333;
+    border-width: 2px;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-style: solid;
+    border-color: #333333;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.15);
+    filter: grayscale(80%);
+    opacity: 1;
+
+    /* Animation */
+    animation: titleAnimation 1s ease-in 4s 2 reverse both paused;
+    animation-name: titleAnimation;
+    -webkit-animation-delay: 1s;
+    -moz-animation-delay: 1s;
+    -o-animation-delay: 1s;
+    -ms-animation-delay: 1s;
+    animation-delay: 1s;
+    animation-timing-function: ease-in;
+    -webkit-animation-duration: 4s;
+    -moz-animation-duration: 4s;
+    -o-animation-duration: 4s;
+    -ms-animation-duration: 4s;
+    animation-duration: 4s;
+    animation-iteration-count: 2;
+    animation-direction: reverse;
+    animation-fill-mode: both;
+    animation-play-state: paused;
+
+    -webkit-transition: all 0.5s ease 1.5s;
+    -moz-transition: all 0.5s ease 1.5s;
+    -o-transition: all 0.5s ease 1.5s;
+    -ms-transition: all 0.5s ease 1.5s;
+    transition: all 0.5s ease 1.5s;
+    -webkit-transition-property: all;
+    -moz-transition-property: all;
+    -o-transition-property: all;
+    -ms-transition-property: all;
+    transition-property: all;
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    -ms-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    -webkit-transition-timing-function: ease;
+    -moz-transition-timing-function: ease;
+    -o-transition-timing-function: ease;
+    -ms-transition-timing-function: ease;
+    transition-timing-function: ease;
+    -webkit-transition-delay: 1.5s;
+    -moz-transition-delay: 1.5s;
+    -o-transition-delay: 1.5s;
+    -ms-transition-delay: 1.5s;
+    transition-delay: 1.5s;
+
+    -webkit-transform: scaleY(0);
+    -moz-transform: scaleY(0);
+    -o-transform: scaleY(0);
+    -ms-transform: scaleY(0);
+    transform: scaleY(0);
+    transform-box: initial;
+    -moz-transform-origin: bottom;
+    -webkit-transform-origin: bottom;
+    -o-transform-origin: bottom;
+    -ms-transform-origin: bottom;
+    transform-origin: bottom;
+    transform-style: initial;
+
+    /* Animation optimization */
+    will-change: transform;
+
+    /* Misc */
+    pointer-events: none;
+    resize: none;
+    cursor: pointer;
+    scroll-behavior: auto;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+    touch-action: pan-y;
+    @include userSelect(none);
+    scrollbar-gutter: stable;
+}
+
+/*----*****---- << End order of properties >> ----*****----*/
+
+/*----*****---- << Examples >> ----*****----*/
+
+.example:hover,
+.example:focus,
+.example:active {
+    display: block;
+}
+
+.example[type="text"],
+.example > * {
+    display: block;
+}
+
+[class*="data-attr"] > * + *,
+[class*="data-text"] > * + .example {
+    display: block;
+}
+
+.example svg circle {
+    cx: 10;
+    cy: 10;
+    r: 10;
+}
+
+/*----*****---- << End examples >> ----*****----*/
+
+/*----*****---- << Common >> ----*****----*/
+
+$fontColor: orange;
+
+$imgUrl: "../images/";
+$fontColor: blue !default; // if no value is specified, then this value will be applied by default
+
+.example {// nesting
+    h2 {
+        color: #00ff00;
+    }
+
+    section {
+        background-image: bg("apples.jpg");
+
+        .title-container {
+            border-radius: 5px;
+        }
+
+        > div {
+            color: $fontColor;
+        }
+    }
+}
+
+@function bg($img) {
+    @return url($imgUrl + $img);
+}
+
+@mixin define-icon($name, $color: blue) {// blue - default value
+    .icon-#{$name} {
+        content: $name;
+        color: $color;
+    }
+}
+
+@include define-icon("user");
+
+%tplColor {// selector not compile
+    color: red;
+}
+
+.error {
+    background-color: green;
+}
+
+.link {
+    font-size: 15px;
+    @extend %tplColor;// legacy properties
+    @extend .error;// legacy properties
+}
+
+@mixin textScreen($important: null, $text: 16) {
+    font-size: $text + "px" $important;
+}
+
+.textScreen {
+    @include textScreen($text: 14);
+}
+
+.textScreen {
+    font-size: 14px;
+}
+
+/*----*****---- << End common >> ----*****----*/
+
+/*----*****---- << Calculations >> ----*****----*/
+
+$size: 12px;
+$modificator: 3;
+
+.example {
+    font-size: $size / $modificator;
+    font-size: #{$size} / #{$modificator};
+}
+
+@function sum($from, $to) {
+    @return $from + $to;
+}
+
+@function px-to-em($px, $context: 16px) {
+    @return ($px / $context) * 1em;
+}
+
+@function strip-value($value) {// no prefix "px", "rem", ...
+    @return $value / (($context * 0) + 1);
+}
+
+h1 {
+    font-size: sum(40px, 20px);
+    margin: px-to-em(30px);
+    padding: strip-value(40em) * 1vh;// will "vh", because multiply by this "vh"
+}
+
+/*----*****---- << End calculations >> ----*****----*/
+
+/*----*****---- << Parent selector >> ----*****----*/
+
+@mixin app-background($color) {
+    #{if(&, "&.app-background", ".app-background")} {// if there is a parent selector
+        background-color: $color;
+    }
+}
+
+@include app-background(#c6538c);
+
+/*----*****---- << End parent selector >> ----*****----*/
+
+/*----*****---- << No limit arguments >> ----*****----*/
+
+@mixin button-size($selectors...) {
+    @for $i from 0 to length($selectors) {
+        #{nth($selectors, $i + 1)} {
+            $mul: $i + 1;
+            padding: 5px * $mul 10px * $mul;
+            border-radius: 5px * $mul;
+            > .button-title {
+                font-size: 12px * $mul;
+            }
+        }
+    }
+}
+
+@include button-size(
+    ".button-size-sm",
+    ".button-size-md",
+    ".button-size-lg",
+);
+
+@mixin button-type($args...) {
+    @each $name, $color in meta.keywords($args) {
+        .example-btn-#{$name} {
+            border: 2px solid $color;
+
+            > .btn-title {
+                color: $color;
+            }
+        }
+    }
+}
+
+@include button-type(
+    $success: green,
+    $error: red,
+    $info: blue,
+);
+
+/*----*****---- << End no limit arguments >> ----*****----*/
+
+/*----*****---- << Insert content >> ----*****----*/
+
+@mixin theme-1 {
+    @if($theme == "theme-1") {
+        @content;
+    }
+}
+
+@include theme-1() {
+    .example {
+        font-size: 150%;
+    }
+}
+
+@mixin hover {
+    &:not([disabled]):hover {// tag disabled={false}
+        @content("not-disabled");
+    }
+
+    &:hover {
+        @content("disabled");// tag disabled={disabled} or disabled
+    }
+}
+
+.button {
+    @include hover() using ($type) {
+        background-color: aqua;
+
+        @if($type == "disabled") {
+            background-color: azure;
+        }
+
+        @if($type == "not-disabled") {
+            background-color: greenyellow;
+        }
+    }
+}
+
+@mixin only-for-mobile($breakpoint) {
+    @media (max-width: #{$breakpoint}) {
+        @content;
+    }
+}
+
+@include only-for-mobile(480px) {
+    p {
+        font-size: 150%;
+    }
+}
+
+@mixin small-screen() {
+    @media (min-width: 576px) and (max-width: 767px) {
+        @content;
+    }
+}
+
+a {
+    @include small-screen {
+        font-size: 15px;
+        background-color: red;
+    }
+}
+
+/*----*****---- << End insert content >> ----*****----*/
+
+/*----*****---- << Grid >> ----*****----*/
+
+@mixin grid($cols, $margin) {
+    li {
+        color: red;
+
+        &:nth-child(#{$cols}n) {// last element in row
+            margin-right: 0;
+        }
+
+        // subtract the total number of right indents
+        width: ((100% - (($cols - 1) * $margin)) / $cols);
+    }
+
+    @if($cols >= 5) {
+        width: 100%;
+        margin-right: 0
+    } @else {
+        width: ((100% - (($cols - 1) * $margin)) / $cols);
+        margin-right: $margin;
+    }
+}
+
+.list {
+    @include grid(4, 2%);
+}
+
+/*----*****---- << End grid >> ----*****----*/
+
+/*----*****---- << Response grid >> ----*****----*/
+
+@media (max-width: 575px) {
+    //
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    //
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    //
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    //
+}
+
+@media (min-width: 1200px) and (max-width: 1399px) {
+    //
+}
+
+@media (min-width: 1400px) and (max-width: 1599px) {
+    //
+}
+
+@media (min-width: 1600px) and (max-width: 1799px) {
+    //
+}
+
+@media (min-width: 1800px) and (max-width: 1999px) {
+    //
+}
+
+@media (min-width: 2000px) and (max-width: 2199px) {
+    //
+}
+
+@media (min-width: 2200px) and (max-width: 2399px) {
+    //
+}
+
+@media (min-width: 2400px) and (max-width: 2599px) {
+    //
+}
+
+/*----*****---- << End response grid >> ----*****----*/

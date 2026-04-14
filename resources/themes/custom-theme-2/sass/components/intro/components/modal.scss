@@ -1,0 +1,114 @@
+/*------------------------------------------------------------------
+
+[Table of contents]
+
+    Modal window
+
+-------------------------------------------------------------------*/
+
+/*----*****---- << Modal window >> ----*****----*/
+
+.intro__modal {
+    position: fixed;
+    @include flexDisplay(flex);
+    z-index: 200;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    @include justifyContent(center);
+    @include alignItems(center);
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    background-color: $bg-color-intro-modal;
+    opacity: 0;
+    @include transitionAnim(all 0.3s ease);
+}
+
+.intro__modal.toggle {
+    visibility: visible;
+    opacity: 1;
+}
+
+.intro__modal .video__player {
+    max-width: 740px;
+    height: auto;
+    border-radius: 5px;
+    @include transform(scale(0, 0));
+}
+
+.is-openModal {
+    @include animation(OpenVideoModal 0.3s ease forwards);
+}
+
+.intro__modal-close {
+    position: fixed;
+    z-index: 200;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    visibility: hidden;
+    opacity: 0;
+    @include transitionAnim(all 0.3s ease);
+    cursor: pointer;
+
+    @include grid($to: "xs") {
+        width: 26px;
+        height: 26px;
+    }
+
+    @include grid($only: "sm") {
+        width: 30px;
+        height: 30px;
+    }
+
+    @include grid($only: "md") {
+        width: 34px;
+        height: 34px;
+    }
+
+    @include grid($only: "lg") {
+        width: 38px;
+        height: 38px;
+    }
+}
+
+.intro__modal-close.toggle {
+    visibility: visible;
+    opacity: 1;
+    @include animation(OpenVideoModal 0.3s ease forwards);
+}
+
+.intro__modal-close::before,
+.intro__modal-close::after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 50%;
+    width: 100%;
+    border-top: 1px solid $border-color-intro-modal-icon-close;
+}
+
+.intro__modal-close::before {
+    @include transform(rotate(45deg));
+}
+
+.intro__modal-close::after {
+    @include transform(rotate(-45deg));
+}
+
+@keyframes OpenVideoModal {
+    0% {
+        opacity: 0.4;
+        @include transform(scale(0.6, 0.6));
+    }
+
+    100% {
+        opacity: 1;
+        @include transform(scale(1, 1));
+    }
+}
+
+/*----*****---- << End modal window >> ----*****----*/

@@ -1,0 +1,63 @@
+/*------------------------------------------------------------------
+
+[Table of contents]
+
+    Scrollbar
+
+-------------------------------------------------------------------*/
+
+/*----*****---- << Scrollbar >> ----*****----*/
+
+@mixin scrollbar($width: null, $color: null, $bgColor: null, $bgColorEffect: null, $unit: "px", $element: null, $shadowIE: null, $bgArrowIE: null) {
+    // Styling of the complete scrollbar. Chrome, Edge, Safari
+    #{$element}::-webkit-scrollbar {
+        width: #{$width} + #{$unit}; // width scroll
+        height: auto;
+        background-color: $bgColor;
+    }
+
+    // Styling of the area in the scrollbar between the two buttons
+    #{$element}::-webkit-scrollbar-track {
+        background-color: $bgColor;
+    }
+
+    // Styling of draggable element of the scrollbar
+    #{$element}::-webkit-scrollbar-thumb {
+        @content;
+        // border: 1px solid $graphite; - padding and color around scroll
+    }
+
+    @if($bgColorEffect != null) {
+        #{$element}::-webkit-scrollbar:hover,
+        #{$element}::-webkit-scrollbar:active,
+        #{$element}::-webkit-scrollbar-thumb:hover,
+        #{$element}::-webkit-scrollbar-thumb:active {
+            background-color: $bgColorEffect;
+        }
+    }
+
+    // Internet Explorer browser
+        // Sets the background color of the area in the scrollbar between the two buttons
+        scrollbar-track-color: $bgColor;
+
+        // Sets the background color of the draggable element of the scrollbar
+        scrollbar-face-color: $color;
+
+        @if($shadowIE != null) {
+            // Sets the shadow color which is applied around the draggable element
+            scrollbar-shadow-color: $shadowIE;
+        }
+
+        @if($bgArrowIE != null) {
+            // Sets the background color of the two buttons (up & down or left & right)
+            scrollbar-arrow-color: $bgArrowIE;
+        }
+    // end Internet Explorer browser
+
+    // Standard version (Firefox only for now)
+    -ms-overflow-style: auto;
+    scrollbar-width: $width;
+    scrollbar-color: $color $bgColor;
+}
+
+/*----*****---- << End scrollbar >> ----*****----*/

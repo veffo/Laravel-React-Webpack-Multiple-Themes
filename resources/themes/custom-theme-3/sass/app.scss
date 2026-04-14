@@ -1,0 +1,40 @@
+/*------------------------------------------------------------------
+
+[Table of contents]
+
+    Common
+    Theme
+        Variables
+        Global
+        Components
+
+-------------------------------------------------------------------*/
+
+/*----*****---- << Common >> ----*****----*/
+
+@import "~plyr-react/plyr.css"; // video player
+@import "../../../assets/sass/custom/init";
+
+/*----*****---- << End common >> ----*****----*/
+
+/*----*****---- << Variables >> ----*****----*/
+
+@import "variables";
+
+/*----*****---- << End variables >> ----*****----*/
+
+/*----*****---- << Global >> ----*****----*/
+
+@import "global";
+
+/*----*****---- << End global >> ----*****----*/
+
+/*----*****---- << Components >> ----*****----*/
+
+@import "components/headerMenu/styles";
+@import "components/intro/styles";
+@import "components/info/styles";
+@import "components/scrollTop/styles";
+@import "components/footer/styles";
+
+/*----*****---- << End components >> ----*****----*/

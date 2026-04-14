@@ -1,0 +1,18 @@
+/*------------------------------------------------------------------
+
+[Table of contents]
+
+    Flex shrink
+
+-------------------------------------------------------------------*/
+
+/*----*****---- << Flex shrink >> ----*****----*/
+
+@mixin flexShrink($shrink: 0, $important: null) {
+    -webkit-flex-shrink: $shrink $important;
+    -moz-flex-shrink: $shrink $important;
+    -ms-flex: $shrink $important;
+    flex-shrink: $shrink $important;
+}
+
+/*----*****---- << End flex shrink >> ----*****----*/

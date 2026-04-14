@@ -1,0 +1,20 @@
+/*------------------------------------------------------------------
+
+[Table of contents]
+
+    Custom bootstrap classes
+        Flex classes
+
+-------------------------------------------------------------------*/
+
+/*----*****---- << Flex classes >> ----*****----*/
+
+.d-flex {
+    @include flexDisplay(flex, !important);
+}
+
+.flex-column {
+    @include flexDirection(column, !important);
+}
+
+/*----*****---- << End flex classes >> ----*****----*/

@@ -1,0 +1,19 @@
+/*------------------------------------------------------------------
+
+[Table of contents]
+
+    Order
+
+-------------------------------------------------------------------*/
+
+/*----*****---- << Order >> ----*****----*/
+
+@mixin order($order: 0, $important: null) {
+    -webkit-box-ordinal-group: $order + 1 $important;
+    -moz-box-ordinal-group: $order + 1 $important;
+    -webkit-order: $order $important;
+    -ms-flex-order: $order $important;
+    order: $order $important;
+}
+
+/*----*****---- << End order >> ----*****----*/

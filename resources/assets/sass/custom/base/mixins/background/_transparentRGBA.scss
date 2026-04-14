@@ -1,0 +1,21 @@
+/*------------------------------------------------------------------
+
+[Table of contents]
+
+    Transparent rgba
+
+-------------------------------------------------------------------*/
+
+/*----*****---- << Transparent rgba >> ----*****----*/
+
+@mixin transparentRGBA($color, $opacity: 1) {
+    $rgba: rgba($color, $opacity);
+    $ie-hex-str: ie-hex-str($rgba);
+
+    background-color: transparent;
+    background-color: $rgba;
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#{$ie-hex-str}, endColorstr=#{$ie-hex-str});
+    zoom: 1;
+}
+
+/*----*****---- << End transparent rgba >> ----*****----*/

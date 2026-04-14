@@ -1,0 +1,19 @@
+/*------------------------------------------------------------------
+
+[Table of contents]
+
+    Transition duration
+
+-------------------------------------------------------------------*/
+
+/*----*****---- << Transition duration >> ----*****----*/
+
+@mixin transitionDuration($value...) {
+    -webkit-transition-duration: $value;
+    -moz-transition-duration: $value;
+    -ms-transition-duration: $value;
+    -o-transition-duration: $value;
+    transition-duration: $value;
+}
+
+/*----*****---- << End transition duration >> ----*****----*/

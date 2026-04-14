@@ -1,0 +1,22 @@
+/*------------------------------------------------------------------
+
+[Table of contents]
+
+    Opacity
+
+-------------------------------------------------------------------*/
+
+/*----*****---- << Opacity >> ----*****----*/
+
+@mixin opacity($value) {
+    $ie-value: $value * 100;
+
+    -webkit-opacity: #{"0." + $value};
+    -moz-opacity: #{"0." + $value};
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=" + $ie-value + ")";
+    -khtml-opacity: #{"0." + $value};
+    filter: alpha(opacity=$ie-value);
+    opacity: #{"0." + $value};
+}
+
+/*----*****---- << End opacity >> ----*****----*/

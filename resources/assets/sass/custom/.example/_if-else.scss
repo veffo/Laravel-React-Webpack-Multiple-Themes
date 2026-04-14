@@ -1,0 +1,29 @@
+/*------------------------------------------------------------------
+
+[Table of contents]
+
+    If else
+
+-------------------------------------------------------------------*/
+
+/*----*****---- << If else >> ----*****----*/
+
+$theme: "theme-2";
+
+.example {
+    @if($theme == "theme-1") {
+        color: red;
+    } @else if($theme == "theme-2") {
+        color: green;
+    } @else if($theme == "theme-3") {
+        color: blue;
+    } @else {
+        color: orange;
+    }
+}
+
+.example {
+    color: green;
+}
+
+/*----*****---- << End if else >> ----*****----*/

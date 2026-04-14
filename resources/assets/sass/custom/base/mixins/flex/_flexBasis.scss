@@ -1,0 +1,17 @@
+/*------------------------------------------------------------------
+
+[Table of contents]
+
+    Flex basis
+
+-------------------------------------------------------------------*/
+
+/*----*****---- << Flex basis >> ----*****----*/
+
+@mixin flexBasis($basis: auto, $important: null) {
+    -webkit-flex-basis: $basis $important;
+    -moz-flex-basis: $basis $important;
+    flex-basis: $basis $important;
+}
+
+/*----*****---- << End flex basis >> ----*****----*/

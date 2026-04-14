@@ -1,0 +1,29 @@
+/*------------------------------------------------------------------
+
+[Table of contents]
+
+    Keyframes
+
+-------------------------------------------------------------------*/
+
+/*----*****---- << Keyframes >> ----*****----*/
+
+@mixin keyframes($value) {
+    @-webkit-keyframes #{$value} {
+        @content;
+    }
+
+    @-moz-keyframes #{$value} {
+        @content;
+    }
+
+    @-o-keyframes #{$value} {
+        @content;
+    }
+
+    @keyframes #{$value} {
+        @content;
+    }
+}
+
+/*----*****---- << End keyframes >> ----*****----*/

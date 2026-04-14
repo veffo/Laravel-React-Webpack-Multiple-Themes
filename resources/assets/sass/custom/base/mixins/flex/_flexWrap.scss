@@ -1,0 +1,23 @@
+/*------------------------------------------------------------------
+
+[Table of contents]
+
+    Flex wrap
+
+-------------------------------------------------------------------*/
+
+/*----*****---- << Flex wrap >> ----*****----*/
+
+@mixin flexWrap($wrap: nowrap, $important: null) {
+    -webkit-flex-wrap: $wrap $important;
+
+    @if($wrap == "nowrap") {
+        -ms-flex-wrap: none $important;
+    } @else {
+        -ms-flex-wrap: $wrap $important;
+    }
+
+    flex-wrap: $wrap $important;
+}
+
+/*----*****---- << End flex wrap >> ----*****----*/

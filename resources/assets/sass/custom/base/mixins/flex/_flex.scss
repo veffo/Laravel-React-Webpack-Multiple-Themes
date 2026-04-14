@@ -1,0 +1,27 @@
+/*------------------------------------------------------------------
+
+[Table of contents]
+
+    Flex
+
+-------------------------------------------------------------------*/
+
+/*----*****---- << Flex >> ----*****----*/
+
+@mixin flex($flexGrow: 1, $flexShrink: 0, $flexBasis: auto, $important: null) {
+    $fg-boxflex: $flexGrow;
+
+    // Box-Flex only supports flex-grow
+    @if(type-of($fg-boxflex) == "list") {
+        $fg-boxflex: nth($fg, 1);
+    }
+
+    -webkit-box: $fg-boxflex $important;
+    -moz-box: $fg-boxflex $important;
+
+    -webkit-flex: $flexGrow $flexShrink $flexBasis $important;
+    -ms-flex: $flexGrow $flexShrink $flexBasis $important;
+    flex: $flexGrow $flexShrink $flexBasis $important;
+}
+
+/*----*****---- << End flex >> ----*****----*/

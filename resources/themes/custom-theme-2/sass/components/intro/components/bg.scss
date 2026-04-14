@@ -1,0 +1,58 @@
+/*------------------------------------------------------------------
+
+[Table of contents]
+
+    Background
+
+-------------------------------------------------------------------*/
+
+/*----*****---- << Background >> ----*****----*/
+
+.intro__bg {
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("/media/custom-theme-2/bgIntro.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    @include backgroundSize(cover);
+}
+
+.intro__bg::before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $bg-color-intro-bg-before;
+    opacity: 0.2;
+}
+
+.intro__bg::after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    @include linearGradient(
+        $bg-linear-gradient-color-angle-intro-bg-after,
+        $bg-linear-gradient-color-gradient1-intro-bg-after,
+        $bg-linear-gradient-color-gradient2-intro-bg-after
+    );
+    opacity: 0.3;
+}
+
+/*----*****---- << End background >> ----*****----*/

@@ -1,0 +1,19 @@
+/*------------------------------------------------------------------
+
+[Table of contents]
+
+    Animation play state
+
+-------------------------------------------------------------------*/
+
+/*----*****---- << Animation play state >> ----*****----*/
+
+@mixin animationPlayState($value) {
+    -webkit-animation-play-state: $value;
+    -moz-animation-play-state: $value;
+    -ms-animation-play-state: $value;
+    -o-animation-play-state: $value;
+    animation-play-state: $value;
+}
+
+/*----*****---- << End animation play state >> ----*****----*/

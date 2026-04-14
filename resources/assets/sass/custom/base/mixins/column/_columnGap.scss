@@ -1,0 +1,17 @@
+/*------------------------------------------------------------------
+
+[Table of contents]
+
+    Column gap
+
+-------------------------------------------------------------------*/
+
+/*----*****---- << Column gap >> ----*****----*/
+
+@mixin columnGap($value) {
+    -webkit-column-gap: $value;
+    -moz-column-gap: $value;
+    column-gap: $value;
+}
+
+/*----*****---- << End column gap >> ----*****----*/

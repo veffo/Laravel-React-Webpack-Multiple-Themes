@@ -1,0 +1,17 @@
+/*------------------------------------------------------------------
+
+[Table of contents]
+
+    Perspective origin
+
+-------------------------------------------------------------------*/
+
+/*----*****---- << Perspective origin >> ----*****----*/
+
+@mixin perspectiveOrigin($value) {
+    -webkit-perspective-origin: $value;
+    -moz-perspective-origin: $value;
+    perspective-origin: $value;
+}
+
+/*----*****---- << End perspective origin >> ----*****----*/

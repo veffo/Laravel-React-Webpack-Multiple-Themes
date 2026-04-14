@@ -1,0 +1,95 @@
+/*------------------------------------------------------------------
+
+[Table of contents]
+
+    Navigation list
+
+-------------------------------------------------------------------*/
+
+/*----*****---- << Navigation list >> ----*****----*/
+
+.c-nav {
+    @include alignContent(center);
+    margin-left: 40px;
+
+    @include grid($to: "sm") {
+        display: block;
+        margin: 0;
+        padding: 0;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        background-color: transparent;
+        @include transitionAnim(max-height 0.5s ease-in-out, padding 0.5s ease-in-out, opacity 0.3s ease);
+    }
+
+    .l-nav__list {
+        @include flexDisplay(inline-flex);
+
+        @include grid($to: "sm") {
+            display: inline;
+        }
+    }
+
+    .nav__item {
+        padding: 0 12px;
+
+        @include grid($to: "xs") {
+            padding: 17px 0 17px 0;
+        }
+
+        @include grid($only: "sm") {
+            padding: 17px 0 17px 4px;
+        }
+
+        @include grid($from: "md", $to: "lg") {
+            padding: 0 11px;
+        }
+
+        @include grid($from: "xl", $to: "3xl") {
+            padding: 0 11px;
+        }
+    }
+
+    .nav__item:first-child {
+        @include grid($to: "sm") {
+            padding-top: 0;
+        }
+    }
+
+    .nav__item:last-child {
+        @include grid($to: "sm") {
+            padding-bottom: 0;
+        }
+    }
+
+    .nav__link {
+        display: block;
+        height: 100%;
+        font-size: 16px;
+        line-height: 1;
+        color: $color-headerMenu-navLink;
+        @include transitionAnim(all 0.3s ease);
+
+        @include grid($to: "xs") {
+            font-size: 14px;
+        }
+
+        @include grid($from: "sm", $to: "lg") {
+            font-size: 15px;
+        }
+
+        @include grid($from: "xl", $to: "3xl") {
+            font-size: 15px;
+        }
+    }
+
+    .nav__link:hover,
+    .nav__link:focus,
+    .nav__link:active,
+    .nav__link._active {
+        color: $color-headerMenu-navLink-active;
+    }
+}
+
+/*----*****---- << End Navigation list >> ----*****----*/

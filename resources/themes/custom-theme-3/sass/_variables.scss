@@ -1,0 +1,196 @@
+/*------------------------------------------------------------------
+
+[Table of contents]
+
+    Typography
+    Body colors
+    Colors
+        Preloader colors
+        Navigation Top Bar colors
+            List links navigation top bar colors
+            Get the info navigation top bar colors
+            Mobile toggle navigation top bar colors
+        Intro
+            Background intro colors
+            Modal window intro colors
+            Content intro colors
+            Scroll intro colors
+            Social list intro colors
+        Info colors
+            Navigation tab list colors
+            Content tabs colors
+        Scroll to top colors
+        Footer colors
+
+-------------------------------------------------------------------*/
+
+/*----*****---- << Typography >> ----*****----*/
+
+$font-family: "AppSans", Helvetica, Arial, sans-serif;
+$font-size-base: 16px;
+$line-height-base: 1.425;
+
+/*----*****---- << End typography >> ----*****----*/
+
+/*----*****---- << Body colors >> ----*****----*/
+
+$color-body: #221e1e;
+$bg-color-body: #ffffff;
+
+/*----*****---- << End body colors >> ----*****----*/
+
+/*----*****---- << Colors >> ----*****----*/
+
+$white: #ffffff;
+$iceWhite: #f6f9fb;
+$black: #000000;
+$raisinBlack: #221e1e;
+$dullBlack: #161616;
+$nearBlack: #101112;
+$darkCharcoal: #2e2e2e;
+$ravenBlack: #3d3d3d;
+$smokyWhite: #f6f7f7;
+$lightTelegray: #cdcecc;
+$whisperGray: #e9eaea;
+$dimGray: #696969;
+$tealBird: #05807a;
+$greenEagle: #034f4b;
+$seaGreen: #3f885c;
+
+/*----*****---- << End colors >> ----*****----*/
+
+/*----*****---- << Preloader colors >> ----*****----*/
+
+$bg-color-preloader: $dullBlack;
+$border-top-color-preloader-loader-before: $darkCharcoal;
+$border-right-color-preloader-loader-before: $darkCharcoal;
+$border-bottom-color-preloader-loader-before: $darkCharcoal;
+$border-left-color-preloader-loader-before: $white;
+
+/*----*****---- << End preloader colors >> ----*****----*/
+
+/*----*****---- << Navigation Top Bar colors >> ----*****----*/
+
+$bg-color-headerMenu-sticky: $dullBlack;
+$bg-color-headerMenu-open: $dullBlack;
+
+/*----*****---- << End navigation Top Bar colors >> ----*****----*/
+
+/*----*****---- << List links navigation top bar colors >> ----*****----*/
+
+$color-headerMenu-navLink: $lightTelegray;
+$color-headerMenu-navLink-active: $white;
+
+/*----*****---- << End list links navigation top bar colors >> ----*****----*/
+
+/*----*****---- << Get the info navigation top bar colors >> ----*****----*/
+
+$color-headerMenu-getTheInfo-btn: $white;
+$border-color-headerMenu-getTheInfo-btn: $white;
+$color-headerMenu-getTheInfo-btn-hover: $black;
+$bg-color-headerMenu-getTheInfo-btn-hover: $white;
+$border-color-headerMenu-getTheInfo-btn-hover: $white;
+$bg-color-headerMenu-sticky-getTheInfo-btn: $darkCharcoal;
+$color-headerMenu-sticky-getTheInfo-btn-hover: $color-body;
+$bg-color-headerMenu-sticky-getTheInfo-btn-hover: $white;
+
+/*----*****---- << End get the info navigation top bar colors >> ----*****----*/
+
+/*----*****---- << Mobile toggle navigation top bar colors >> ----*****----*/
+
+$bg-color-headerMenu-mobileToggle-span: $white;
+$bg-color-headerMenu-mobileToggle-clicked-span: $black;
+$bg-color-headerMenu-mobileToggle-before-after: $white;
+
+/*----*****---- << End mobile toggle navigation top bar colors >> ----*****----*/
+
+/*----*****---- << Background intro colors >> ----*****----*/
+
+$bg-color-intro-bg-before: $black;
+$bg-linear-gradient-color-angle-intro-bg-after: 0deg;
+$bg-linear-gradient-color-gradient1-intro-bg-after: $black 15%;
+$bg-linear-gradient-color-gradient2-intro-bg-after: rgba(0, 0, 0, 0) 100%;
+
+/*----*****---- << End background intro colors >> ----*****----*/
+
+/*----*****---- << Modal window intro colors >> ----*****----*/
+
+$bg-color-intro-modal: rgba(0, 0, 0, 0.7);
+$border-color-intro-modal-icon-close: $white;
+
+/*----*****---- << End modal window intro colors >> ----*****----*/
+
+/*----*****---- << Content intro colors >> ----*****----*/
+
+$color-intro-content: $white;
+$color-intro-content-btn-gti: $white;
+$bg-color-intro-content-btn-gti: $tealBird;
+$border-color-intro-content-btn-gti: $tealBird;
+$bg-color-intro-content-btn-gti-hover: $greenEagle;
+$border-color-intro-content-btn-gti-hover: $greenEagle;
+$bg-color-intro-content-btn-video: $white;
+$bg-color-intro-content-btn-video-hover: $tealBird;
+$color-intro-content-btn-video-icon: $black;
+$color-intro-content-btn-video-icon-hover: $white;
+
+/*----*****---- << End content intro colors >> ----*****----*/
+
+/*----*****---- << Scroll intro colors >> ----*****----*/
+
+$color-intro-scroll: $white;
+
+/*----*****---- << End scroll intro colors >> ----*****----*/
+
+/*----*****---- << Social list intro colors >> ----*****----*/
+
+$color-intro-social-item-icon: $white;
+
+/*----*****---- << End social list intro colors >> ----*****----*/
+
+/*----*****---- << Info colors >> ----*****----*/
+
+$bg-color-info: $smokyWhite;
+
+/*----*****---- << End info colors >> ----*****----*/
+
+/*----*****---- << Navigation tab list colors >> ----*****----*/
+
+$border-color-info-nav-tab-list-item: $black;
+$bg-color-info-nav-tab-list-item-active: $black;
+$color-info-nav-tab-list-item-active-text-link: $white;
+
+/*----*****---- << End navigation tab list colors >> ----*****----*/
+
+/*----*****---- << Content tabs colors >> ----*****----*/
+
+$color-info-tab-content-about-step-text-title-before: $white;
+$bg-color-info-tab-content-about-step-text-title-before: $seaGreen;
+$bg-color-info-tab-content-facts-item-icon: $whisperGray;
+$color-info-tab-content-facts-item-icon-text: $seaGreen;
+$border-color-info-tab-content-gallery-btn: $raisinBlack;
+$bg-color-info-tab-content-gallery-btn-before: $raisinBlack;
+$color-info-tab-content-gallery-btn-icon-text: $raisinBlack;
+$color-info-tab-content-gallery-btn-hover-icon-text: $iceWhite;
+
+/*----*****---- << End content tabs colors >> ----*****----*/
+
+/*----*****---- << Scroll to top colors >> ----*****----*/
+
+$color-arrowToTop-link: $white;
+$bg-color-arrowToTop-link: $darkCharcoal;
+$bg-color-arrowToTop-link-hover: $ravenBlack;
+
+/*----*****---- << End scroll to top colors >> ----*****----*/
+
+/*----*****---- << Footer colors >> ----*****----*/
+
+$color-footer: $dimGray;
+$bg-color-footer: $nearBlack;
+$color-footer-title: $white;
+$color-footer-contact-subtitle: $white;
+$color-footer-contact-link-hover: $white;
+$color-footer-social-link: $white;
+$bg-color-footer-social-link: $raisinBlack;
+$bg-color-footer-social-link-hover: $darkCharcoal;
+
+/*----*****---- << End footer colors >> ----*****----*/

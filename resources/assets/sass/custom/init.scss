@@ -1,0 +1,45 @@
+/*------------------------------------------------------------------
+
+[Table of contents]
+
+    Bootstrap v5.3.8
+    Base
+    Global
+    Animation
+    Components
+
+-------------------------------------------------------------------*/
+
+/*----*****---- << Bootstrap >> ----*****----*/
+
+@import "../bootstrap/bootstrap";
+
+/*----*****---- << End bootstrap >> ----*****----*/
+
+/*----*****---- << Base >> ----*****----*/
+
+@import "base/functions";
+@import "base/mixins";
+
+/*----*****---- << End base >> ----*****----*/
+
+/*----*****---- << Global >> ----*****----*/
+
+@import "global/variables.bootstrap";
+@import "global/variables.custom";
+@import "global/normalize";
+
+/*----*****---- << End global >> ----*****----*/
+
+/*----*****---- << Animation >> ----*****----*/
+
+@import "../animation/wow";
+@import "../animation/customAnimation";
+
+/*----*****---- << End animation >> ----*****----*/
+
+/*----*****---- << Components >> ----*****----*/
+
+@import "components/components";
+
+/*----*****---- << End components >> ----*****----*/

@@ -1,0 +1,19 @@
+/*------------------------------------------------------------------
+
+[Table of contents]
+
+    Animation duration
+
+-------------------------------------------------------------------*/
+
+/*----*****---- << Animation duration >> ----*****----*/
+
+@mixin animationDuration($value) {
+    -webkit-animation-duration: $value;
+    -moz-animation-duration: $value;
+    -ms-animation-duration: $value;
+    -o-animation-duration: $value;
+    animation-duration: $value;
+}
+
+/*----*****---- << End animation duration >> ----*****----*/

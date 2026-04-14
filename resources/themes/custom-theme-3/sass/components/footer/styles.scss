@@ -1,0 +1,86 @@
+/*------------------------------------------------------------------
+
+[Table of contents]
+
+    Footer
+
+-------------------------------------------------------------------*/
+
+/*----*****---- << Footer >> ----*****----*/
+
+.c-footer {
+    padding-top: 96px;
+    padding-bottom: 64px;
+    font-weight: 300;
+    line-height: 1.8;
+    color: $color-footer;
+    background-color: $bg-color-footer;
+
+    @include grid($to: "xs") {
+        padding-top: 96px;
+        padding-bottom: 64px;
+    }
+
+    @include grid($only: "sm") {
+        padding-top: 96px;
+        padding-bottom: 64px;
+    }
+
+    @include grid($only: "md") {
+        padding-top: 96px;
+        padding-bottom: 64px;
+    }
+
+    @include grid($only: "lg") {
+        padding-top: 96px;
+        padding-bottom: 64px;
+    }
+
+    @include grid($only: "xl") {
+        padding-top: 96px;
+        padding-bottom: 64px;
+    }
+
+    @include grid($only: "2xl") {
+        padding-top: 96px;
+        padding-bottom: 64px;
+    }
+
+    .footer__title {
+        margin-bottom: 40px;
+        font-size: 18px;
+        line-height: 1.8;
+        font-weight: 600;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        color: $color-footer-title;
+
+        @include grid($to: "xs") {
+            margin-bottom: 30px;
+            font-size: 16px;
+        }
+
+        @include grid($only: "sm") {
+            margin-bottom: 33px;
+            font-size: 16.5px;
+        }
+
+        @include grid($only: "md") {
+            margin-bottom: 37px;
+            font-size: 17px;
+        }
+    }
+
+    .footer--right .footer__title {
+        @include grid($to: "xs") {
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+    }
+
+    @import "components/contact";
+    @import "components/social";
+    @import "components/copy";
+}
+
+/*----*****---- << End footer >> ----*****----*/

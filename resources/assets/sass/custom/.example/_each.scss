@@ -1,0 +1,66 @@
+/*------------------------------------------------------------------
+
+[Table of contents]
+
+    Cycle each
+
+-------------------------------------------------------------------*/
+
+/*----*****---- << Cycle each >> ----*****----*/
+
+$sizes: 8, 16, 32;
+
+@each $size in $sizes {
+    .ml-#{$size}-px {
+        margin-left: #{$size} + "px";
+    }
+
+    .mr-#{$size}-px {
+        margin-right: #{$size} + "px";
+    }
+}
+
+$fonts: ("tiny": 8px, "medium": 10px, "large": 13px);
+
+@each $name, $value in $fonts {
+    .#{$name} {
+        font-size: $value;
+    }
+}
+
+.tiny {
+    font-size: 8px;
+}
+
+.medium {
+    font-size: 10px;
+}
+
+.large {
+    font-size: 13px;
+}
+
+@mixin button-types($args...) {
+    @each $name, $color in meta.keywords($args) {
+        .button-type-#{$name} {
+            border: 1px solid $color;
+
+            > .button-title {
+                color: $color;
+            }
+        }
+    }
+}
+
+@include button-types($success: #00ff00, $error: #ff0000, $info: #0000ff);
+
+@each $animal, $color, $cursor in ($breakpoints) {
+    .example {
+        background-image: url('/images/#{$animal}.png');
+        border: 2px solid $color;
+        cursor: $cursor;
+        min-width: map-get($breakpoints, "sm") + "px";
+    }
+}
+
+/*----*****---- << End cycle each >> ----*****----*/

@@ -1,0 +1,49 @@
+/*------------------------------------------------------------------
+
+[Table of contents]
+
+    Autocomplete autofill
+
+-------------------------------------------------------------------*/
+
+/*----*****---- << Autocomplete autofill >> ----*****----*/
+
+@mixin autofill($element: null, $hover: null, $focus: null, $active: null) {
+    @if($element != null) {
+        #{$element} {
+            &::-webkit-autofill,
+            &::autofill {
+                @content;
+            }
+        }
+    }
+
+    @if(($element != null) and ($hover != null)) {
+        #{$element}:hover {
+            &::-webkit-autofill,
+            &::autofill {
+                @content;
+            }
+        }
+    }
+
+    @if(($element != null) and ($focus != null)) {
+        #{$element}:focus {
+            &::-webkit-autofill,
+            &::autofill {
+                @content;
+            }
+        }
+    }
+
+    @if(($element != null) and ($active != null)) {
+        #{$element}:active {
+            &::-webkit-autofill,
+            &::autofill {
+                @content;
+            }
+        }
+    }
+}
+
+/*----*****---- << End autocomplete autofill >> ----*****----*/

@@ -1,0 +1,19 @@
+/*------------------------------------------------------------------
+
+[Table of contents]
+
+    Animation fill mode
+
+-------------------------------------------------------------------*/
+
+/*----*****---- << Animation fill mode >> ----*****----*/
+
+@mixin animationFillMode($value) {
+    -webkit-animation-fill-mode: $value;
+    -moz-animation-fill-mode: $value;
+    -ms-animation-fill-mode: $value;
+    -o-animation-fill-mode: $value;
+    animation-fill-mode: $value;
+}
+
+/*----*****---- << End animation fill mode >> ----*****----*/

@@ -1,0 +1,122 @@
+/*------------------------------------------------------------------
+
+[Table of contents]
+
+    Header menu
+        Logo
+        Navigation list
+        Mobile toggle
+        Get the info
+
+-------------------------------------------------------------------*/
+
+/*----*****---- << Header menu >> ----*****----*/
+
+.c-headerMenu {
+    position: absolute;
+    z-index: 100;
+    top: 50px;
+    width: 100%;
+    background-color: transparent;
+
+    @include grid($to: "xs") {
+        top: 0;
+        padding-top: 40px;
+
+        &:not(.is-sticky) {
+            padding-bottom: 20px;
+        }
+    }
+
+    @include grid($only: "sm") {
+        top: 0;
+        padding-top: 50px;
+
+        &:not(.is-sticky) {
+            padding-bottom: 20px;
+        }
+    }
+
+    @include grid($from: "md", $to: "lg") {
+        top: 30px;
+    }
+
+    @include grid($from: "xl", $to: "3xl") {
+        top: 40px;
+    }
+
+    .l-headerMenu--content {
+        @include flexDisplay(flex);
+        opacity: 0;
+        @include transitionAnim(opacity 0.6s cubic-bezier(0.28, 0.12, 0.22, 1));
+        @include transitionProperty(opacity);
+
+        @include grid($to: "sm") {
+            display: block;
+        }
+    }
+
+    .headerMenu--header {
+        z-index: 10;
+    }
+
+    @import "components/logo";
+    @import "components/nav";
+}
+
+@include grid($to: "sm") {
+    .c-headerMenu,
+    .c-headerMenu.is-sticky,
+    .menu-is-open .c-headerMenu.is-sticky {
+        @include transitionAnim(background-color 0.5s ease-in-out);
+    }
+}
+
+.c-headerMenu.is-sticky {
+    position: fixed;
+    top: 0;
+    padding: 20px 0;
+    background-color: $bg-color-headerMenu-sticky;
+
+    @include grid($to: "xs") {
+        padding: 20px 15px;
+    }
+
+    @include grid($from: "md", $to: "lg") {
+        padding: 16px 0;
+    }
+
+    @include grid($from: "xl", $to: "3xl") {
+        padding: 18px 0;
+    }
+}
+
+.menu-is-open {
+    @include grid($to: "xs") {
+        .c-nav {
+            padding: 40px 0 20px 0;
+        }
+    }
+
+    @include grid($only: "sm") {
+        .c-nav {
+            padding: 50px 0 20px 0;
+        }
+    }
+
+    @include grid($to: "sm") {
+        .c-headerMenu {
+            background-color: $bg-color-headerMenu-open;
+        }
+
+        .c-nav {
+            max-height: 500px;
+            opacity: 1;
+        }
+    }
+}
+
+@import "components/mobileToggle";
+@import "components/gti";
+
+/*----*****---- << End header menu >> ----*****----*/

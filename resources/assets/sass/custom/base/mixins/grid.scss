@@ -1,0 +1,239 @@
+/*------------------------------------------------------------------
+
+[Table of contents]
+
+    Grid
+
+-------------------------------------------------------------------*/
+
+/*----*****---- << Grid >> ----*****----*/
+
+$breakpoints: (
+    "2xs": (0, 379),
+    "xs": (0, 575),
+    "sm": (576, 767),
+    "md": (768, 991),
+    "lg": (992, 1199),
+    "xl": (1200, 1399),
+    "2xl": (1400, 1599),
+    "3xl": (1600, 1799),
+    "4xl": (1800, 1999),
+    "5xl": (2000, 2199),
+    "6xl": (2200, 2399),
+    "7xl": (2400, 2599),
+);
+
+$typeDevices: (
+    "all",
+    "print",
+    "screen",
+    "speech",
+);
+
+$orientations: (
+    "landscape",
+    "portrait",
+);
+
+@mixin grid($from: null, $to: null, $only: null, $unit: "px", $typeDevice: null, $orientation: null) {
+    @if($typeDevice != null) {
+        @if(type-of($typeDevice) == string) {
+            @if(index($typeDevices, $typeDevice) != false) {
+                @each $type in ($typeDevices) {
+                    @if($typeDevice == $type) {
+                        $typeDevice: $typeDevice;
+                    }
+                }
+            } @else {
+                $typeDevice: "all";
+            }
+        }
+    } @else if($typeDevice == null) {
+        $typeDevice: "all";
+    }
+
+    @if($orientation != null) {
+        @if(type-of($orientation) == string) {
+            @if(index($orientations, $orientation) != false) {
+                @each $item in ($orientations) {
+                    @if($orientation == $item) {
+                        $orientation: $orientation;
+                    }
+                }
+            }
+        }
+    }
+
+    @if($from != null or $to != null) {
+        @if($from != null and $to == null) {
+            @if(type-of($from) == string) and (map-has-key($breakpoints, $from)) {
+                @each $keyPoint, $point in ($breakpoints) {
+                    @if($keyPoint == $from) {
+                        $minWidth: nth($point, 1) + $unit;
+
+                        @if($orientation != null) {
+                            @media #{$typeDevice} and (min-width: $minWidth) and (orientation: #{$orientation}) {
+                                @content;
+                            }
+                        } @else {
+                            @media #{$typeDevice} and (min-width: $minWidth) {
+                                @content;
+                            }
+                        }
+                    }
+                }
+            } @else if(type-of($from) == number) {
+                $minWidth: $from + $unit;
+
+                @if($orientation != null) {
+                    @media #{$typeDevice} and (min-width: $minWidth) and (orientation: #{$orientation}) {
+                        @content;
+                    }
+                } @else {
+                    @media #{$typeDevice} and (min-width: $minWidth) {
+                        @content;
+                    }
+                }
+            }
+        } @else if($from == null and $to != null) {
+            @if(type-of($to) == string) and (map-has-key($breakpoints, $to)) {
+                @each $keyPoint, $point in ($breakpoints) {
+                    @if($keyPoint == $to) {
+                        $maxWidth: nth($point, 2) + $unit;
+
+                        @if($orientation != null) {
+                            @media #{$typeDevice} and (max-width: $maxWidth) and (orientation: #{$orientation}) {
+                                @content;
+                            }
+                        } @else {
+                            @media #{$typeDevice} and (max-width: $maxWidth) {
+                                @content;
+                            }
+                        }
+                    }
+                }
+            } @else if(type-of($to) == number) {
+                $maxWidth: $to + $unit;
+
+                @if($orientation != null) {
+                    @media #{$typeDevice} and (max-width: $maxWidth) and (orientation: #{$orientation}) {
+                        @content;
+                    }
+                } @else {
+                    @media #{$typeDevice} and (max-width: $maxWidth) {
+                        @content;
+                    }
+                }
+            }
+        } @else if($from != null and $to != null) {
+            $minWidth: null;
+            $maxWidth: null;
+
+            @if(type-of($from) == string) and (map-has-key($breakpoints, $from)) {
+                @each $keyPoint, $point in ($breakpoints) {
+                    @if($keyPoint == $from) {
+                        $minWidth: nth($point, 1) + $unit;
+                    }
+                }
+            } @else if(type-of($from) == number) {
+                $minWidth: $from + $unit;
+            }
+
+            @if(type-of($to) == string) and (map-has-key($breakpoints, $to)) {
+                @each $keyPoint, $point in ($breakpoints) {
+                    @if($keyPoint == $to) {
+                        $maxWidth: nth($point, 2) + $unit;
+                    }
+                }
+            } @else if(type-of($to) == number) {
+                $maxWidth: $to + $unit;
+            }
+
+            @if($orientation != null) {
+                @media #{$typeDevice} and (min-width: $minWidth) and (max-width: $maxWidth) and (orientation: #{$orientation}) {
+                    @content;
+                }
+            } @else {
+                @media #{$typeDevice} and (min-width: $minWidth) and (max-width: $maxWidth) {
+                    @content;
+                }
+            }
+        }
+    }
+
+    @if($only != null) {
+        $minWidth: null;
+        $maxWidth: null;
+
+        @each $param1, $param2 in $only {
+            @if(type-of(nth($param1, 1)) == string) and (map-has-key($breakpoints, nth($param1, 1))) {
+                @each $keyPoint, $point in ($breakpoints) {
+                    @if($keyPoint == nth($param1, 1)) {
+                        $minWidth: nth($point, 1) + $unit;
+                    }
+
+                    @if($keyPoint == nth($param1, 1)) {
+                        $maxWidth: nth($point, 2) + $unit;
+                    }
+                }
+
+                @if($orientation != null) {
+                    @media #{$typeDevice} and (min-width: $minWidth) and (max-width: $maxWidth) and (orientation: #{$orientation}) {
+                        @content;
+                    }
+                } @else {
+                    @media #{$typeDevice} and (min-width: $minWidth) and (max-width: $maxWidth) {
+                        @content;
+                    }
+                }
+            } @else if(type-of(nth($param1, 1)) == number and type-of(nth($param2, 1)) == number) {
+                $minWidth: nth($param1, 1) + $unit;
+                $maxWidth: nth($param2, 1) + $unit;
+
+                @if($orientation != null) {
+                    @media #{$typeDevice} and (min-width: $minWidth) and (max-width: $maxWidth) and (orientation: #{$orientation}) {
+                        @content;
+                    }
+                } @else {
+                    @media #{$typeDevice} and (min-width: $minWidth) and (max-width: $maxWidth) {
+                        @content;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// .example {
+    // @include grid($from: "2xl", $to: "5xl") {
+    //     height: 170px;
+    //     border: 2px solid blue;
+    // }
+
+    // @include grid($from: 1000, $to: "5xl") {
+    //     height: 170px;
+    //     border: 2px solid blue;
+    // }
+
+    // @include grid($from: "sm", $to: 2300) {
+    //     height: 170px;
+    //     border: 2px solid blue;
+    // }
+
+    // @include grid($from: 100, $to: 2400) {
+    //     height: 170px;
+    //     border: 2px solid blue;
+    // }
+// }
+
+// .example {
+//     @include grid($only: ((1000, 2000), "4xl")) {
+//         height: 170px;
+//         border: 2px solid blue;
+//         // background-image: url("/images/#{$color}.png");
+//     }
+// }
+
+// @include grid($only: (("screen", "xl"), ("4xl", "all")));
+
+/*----*****---- << End grid >> ----*****----*/

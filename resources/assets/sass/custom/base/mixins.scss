@@ -1,0 +1,225 @@
+/*------------------------------------------------------------------
+
+[Table of contents]
+
+    Mixins
+        Grid
+        Crossbrowser property
+        Filter
+        Backface visibility
+        Opacity
+        Resize
+        Scrollbar
+        Scrollbar buttons
+        Selection
+        Tab size
+        Z index
+        Browser
+            User select
+            Appearance
+            Touch action
+        Flex
+            Flex display
+            Flex direction
+            Flex wrap
+            Flex flow
+            Flex grow
+            Flex shrink
+            Flex basis
+            Align
+                Order
+                Justify content
+                Align content
+                Align items
+                Align self
+        Box
+            Box decoration break
+            Box shadow
+            Box sizing
+        Border
+            Border image
+            Border radius
+            Border top left radius
+            Border top right radius
+            Border bottom left radius
+            Border bottom right radius
+        Column
+            Columns
+            Column count
+            Column fill
+            Column gap
+            Column span
+            Column width
+            Column rule
+            Column rule color
+            Column rule style
+            Column rule width
+        Placeholder
+            Autocomplete autofill
+        Overflow
+            Overflow x
+            Overflow y
+        Background
+            Background size
+            Linear gradient
+            Transparent rgba
+        Text
+            Font align last
+            Font face
+            Font kering
+            Font smooth
+            Perspective
+            Perspective origin
+            Tap highlight color
+            Text decoration color
+            Text decoration line
+            Text decoration style
+            Text overflow
+            Text size adjust
+        Animation
+            Animation name
+            Animation delay
+            Animation direction
+            Animation duration
+            Animation fill mode
+            Animation iteration count
+            Animation play state
+            Animation timing function
+            Transition
+            Transition delay
+            Transition duration
+            Transition property
+            Transition timing function
+            Transform
+            Transform style
+            Transform origin
+            Keyframes
+            Rotate
+            Disable animation
+
+-------------------------------------------------------------------*/
+
+/*----*****---- << Mixins >> ----*****----*/
+
+@import "mixins/grid";
+
+@import "mixins/crossBrowser";
+@import "mixins/filter";
+@import "mixins/backfaceVisibility";
+@import "mixins/opacity";
+@import "mixins/resize";
+@import "mixins/scrollbar/scrollbar";
+@import "mixins/scrollbar/scrollbarBtn";
+@import "mixins/selection";
+@import "mixins/tabSize";
+@import "mixins/zIndex";
+
+// browser
+@import "mixins/browser/userSelect";
+@import "mixins/browser/appearance";
+@import "mixins/browser/touchAction";
+// end browser
+
+// flex
+@import "mixins/flex/flex";
+@import "mixins/flex/flexDisplay";
+@import "mixins/flex/flexDirection";
+@import "mixins/flex/flexWrap";
+@import "mixins/flex/flexFlow";
+@import "mixins/flex/flexGrow";
+@import "mixins/flex/flexShrink";
+@import "mixins/flex/flexBasis";
+
+@import "mixins/flex/order";
+@import "mixins/flex/justifyContent";
+@import "mixins/flex/alignContent";
+@import "mixins/flex/alignItems";
+@import "mixins/flex/alignSelf";
+// end flex
+
+// box
+@import "mixins/box/boxDecorationBreak";
+@import "mixins/box/boxShadow";
+@import "mixins/box/boxSizing";
+// end box
+
+// border
+@import "mixins/border/borderImage";
+@import "mixins/border/borderRadius";
+@import "mixins/border/borderTopLeftRadius";
+@import "mixins/border/borderTopRightRadius";
+@import "mixins/border/borderBottomLeftRadius";
+@import "mixins/border/borderBottomRightRadius";
+// end border
+
+// сolumn
+@import "mixins/column/columns";
+@import "mixins/column/columnCount";
+@import "mixins/column/columnFill";
+@import "mixins/column/columnGap";
+@import "mixins/column/columnSpan";
+@import "mixins/column/columnWidth";
+@import "mixins/column/columnRule";
+@import "mixins/column/columnRuleColor";
+@import "mixins/column/columnRuleStyle";
+@import "mixins/column/columnRuleWidth";
+// end сolumn
+
+// placeholder
+@import "mixins/placeholder/placeholder";
+@import "mixins/placeholder/autofill";
+// end placeholder
+
+// overflow
+@import "mixins/overflow/overflowX";
+@import "mixins/overflow/overflowY";
+// end overflow
+
+// background
+@import "mixins/background/backgroundSize";
+@import "mixins/background/linearGradient";
+@import "mixins/background/transparentRGBA";
+// end background
+
+// text
+@import "mixins/text/fontAlignLast";
+@import "mixins/text/fontFace";
+@import "mixins/text/fontKering";
+@import "mixins/text/fontSmooth";
+@import "mixins/text/perspective";
+@import "mixins/text/perspectiveOrigin";
+@import "mixins/text/tapHighlightColor";
+@import "mixins/text/textDecorationColor";
+@import "mixins/text/textDecorationLine";
+@import "mixins/text/textDecorationStyle";
+@import "mixins/text/textOverflow";
+@import "mixins/text/textSizeAdjust";
+// end text
+
+// animation
+@import "mixins/animation/animation";
+@import "mixins/animation/animationName";
+@import "mixins/animation/animationDelay";
+@import "mixins/animation/animationDirection";
+@import "mixins/animation/animationDuration";
+@import "mixins/animation/animationFillMode";
+@import "mixins/animation/animationIterationCount";
+@import "mixins/animation/animationPlayState";
+@import "mixins/animation/animationTimingFunction";
+
+@import "mixins/animation/transition";
+@import "mixins/animation/transitionDelay";
+@import "mixins/animation/transitionDuration";
+@import "mixins/animation/transitionProperty";
+@import "mixins/animation/transitionTimingFunction";
+
+@import "mixins/animation/transform";
+@import "mixins/animation/transformStyle";
+@import "mixins/animation/transformOrigin";
+@import "mixins/animation/keyframes";
+@import "mixins/animation/rotate";
+
+@import "mixins/animation/disableAnimation";
+// end animation
+
+/*----*****---- << End mixins >> ----*****----*/

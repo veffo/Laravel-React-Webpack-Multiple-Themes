@@ -1,0 +1,19 @@
+/*------------------------------------------------------------------
+
+[Table of contents]
+
+    Flex grow
+
+-------------------------------------------------------------------*/
+
+/*----*****---- << Flex grow >> ----*****----*/
+
+@mixin flexGrow($grow: 1, $important: null) {
+    -webkit-box-flex: $grow $important;
+    -moz-box-flex: $grow $important;
+    -webkit-flex-grow: $grow $important;
+    -ms-flex: $grow $important;
+    flex-grow: $grow $important;
+}
+
+/*----*****---- << End flex grow >> ----*****----*/

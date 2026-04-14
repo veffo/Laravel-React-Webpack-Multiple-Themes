@@ -1,0 +1,652 @@
+/*------------------------------------------------------------------
+
+[Table of contents]
+
+    Content tabs
+        Common
+        Items
+            About
+            Facts
+            Gallery header
+                Gallery header navigation
+            Gallery slider
+
+-------------------------------------------------------------------*/
+
+/*----*****---- << Content tabs >> ----*****----*/
+
+.c-tab__content {
+    position: relative;
+    overflow: hidden;
+
+    /*----*****---- << Common >> ----*****----*/
+
+    .content-header__title {
+        margin-bottom: 40px;
+        font-size: 25px;
+        font-weight: 600;
+
+        @include grid($to: "xs") {
+            font-size: 21px;
+        }
+
+        @include grid($only: "sm") {
+            font-size: 22px;
+        }
+
+        @include grid($only: "md") {
+            font-size: 23px;
+        }
+
+        @include grid($only: "lg") {
+            font-size: 23px;
+        }
+
+        @include grid($only: "xl") {
+            font-size: 24px;
+        }
+
+        @include grid($only: "2xl") {
+            font-size: 24px;
+        }
+    }
+
+    .content-text__title {
+        font-size: 22px;
+        font-weight: 500;
+
+        @include grid($to: "xs") {
+            font-size: 17px;
+        }
+
+        @include grid($only: "sm") {
+            font-size: 17px;
+        }
+
+        @include grid($only: "md") {
+            font-size: 18px;
+        }
+
+        @include grid($only: "lg") {
+            font-size: 19px;
+        }
+
+        @include grid($only: "xl") {
+            font-size: 20px;
+        }
+
+        @include grid($only: "2xl") {
+            font-size: 21px;
+        }
+    }
+
+    .content-text__subtitle {
+        font-size: 20px;
+        font-weight: 500;
+
+        @include grid($to: "xs") {
+            font-size: 18px;
+        }
+
+        @include grid($only: "sm") {
+            font-size: 19px;
+        }
+
+        @include grid($only: "md") {
+            font-size: 19px;
+        }
+
+        @include grid($only: "lg") {
+            font-size: 18px;
+        }
+
+        @include grid($only: "xl") {
+            font-size: 19.5px;
+        }
+
+        @include grid($only: "2xl") {
+            font-size: 19.5px;
+        }
+    }
+
+    .content-mgTop--type1 {
+        margin-top: 60px;
+
+        @include grid($to: "xs") {
+            margin-top: 40px;
+        }
+
+        @include grid($only: "sm") {
+            margin-top: 43px;
+        }
+
+        @include grid($only: "md") {
+            margin-top: 46px;
+        }
+
+        @include grid($only: "lg") {
+            margin-top: 50px;
+        }
+
+        @include grid($only: "xl") {
+            margin-top: 54px;
+        }
+
+        @include grid($only: "2xl") {
+            margin-top: 57px;
+        }
+    }
+
+    .content-mgTop--type2 {
+        margin-top: 40px;
+
+        @include grid($to: "xs") {
+            margin-top: 30px;
+        }
+
+        @include grid($only: "sm") {
+            margin-top: 30px;
+        }
+
+        @include grid($only: "md") {
+            margin-top: 35px;
+        }
+
+        @include grid($only: "lg") {
+            margin-top: 35px;
+        }
+    }
+
+    .content-mgTop--type3 {
+        margin-top: 20px;
+    }
+
+    /*----*****---- << End common >> ----*****----*/
+
+    /*----*****---- << Items >> ----*****----*/
+
+    .tab-content__item {
+        position: absolute;
+        top: 40px;
+        height: 0;
+        visibility: hidden;
+        overflow: hidden;
+        opacity: 0;
+    }
+
+    .tab-content__item[data-tab-active] {
+        position: relative;
+        top: 0;
+        visibility: visible;
+        opacity: 1;
+        @include transitionAnim(all 0.6s ease);
+    }
+
+    /*----*****---- << End items >> ----*****----*/
+
+    /*----*****---- << About >> ----*****----*/
+
+    .tab-content__about {
+        @include flexDisplay(flex);
+    }
+
+    .tab-content__about--left {
+        width: 780px;
+
+        @include grid($from: "sm", $to: "md") {
+            @include flexDisplay(flex);
+            @include flexWrap(wrap);
+        }
+
+        @include grid($to: "md") {
+            width: 100%;
+        }
+
+        @include grid($only: "lg") {
+            width: 500px;
+        }
+
+        @include grid($only: "xl") {
+            width: 650px;
+        }
+
+        @include grid($only: "2xl") {
+            width: 800px;
+        }
+    }
+
+    .tab-content__about--right {
+        position: absolute;
+        right: -9.5%;
+
+        @include grid($to: "md") {
+            display: none;
+        }
+
+        @include grid($only: "lg") {
+            right: -13%;
+        }
+
+        @include grid($only: "xl") {
+            right: -11%;
+        }
+    }
+
+    .tab-content__about-screens {
+        position: relative;
+        width: 680px;
+    }
+
+    .tab-content__about-screens img {
+        border-radius: 16px;
+    }
+
+    .tab-content__about-step {
+        margin-top: 40px;
+        counter-increment: countStep;
+
+        @include grid($to: "xs") {
+            margin-top: 25px;
+        }
+
+        @include grid($from: "sm", $to: "md") {
+            width: 50%;
+        }
+
+        @include grid($only: "sm") {
+            margin: 0 0 25px 0;
+        }
+
+        @include grid($only: "md") {
+            margin: 0 0 30px 0;
+        }
+    }
+
+    .tab-content__about-step:first-child {
+        margin-top: 0;
+    }
+
+    .tab-content__about-step:nth-child(3),
+    .tab-content__about-step:nth-child(4) {
+        @include grid($from: "sm", $to: "md") {
+            margin: 0;
+        }
+    }
+
+    .tab-content__about-step div {
+        padding-left: 72px;
+
+        @include grid($to: "xs") {
+            padding-left: 50px;
+        }
+
+        @include grid($only: "sm") {
+            padding-left: 55px;
+        }
+
+        @include grid($only: "md") {
+            padding-left: 60px;
+        }
+
+        @include grid($only: "lg") {
+            padding-left: 63px;
+        }
+
+        @include grid($only: "xl") {
+            padding-left: 66px;
+        }
+
+        @include grid($only: "2xl") {
+            padding-left: 69px;
+        }
+    }
+
+    .tab-content__about-step .content-text__title {
+        position: relative;
+        margin-bottom: 4px;
+        line-height: 48px;
+
+        @include grid($to: "xs") {
+            line-height: 34px;
+        }
+
+        @include grid($only: "sm") {
+            line-height: 38px;
+        }
+
+        @include grid($only: "md") {
+            line-height: 40px;
+        }
+
+        @include grid($only: "lg") {
+            line-height: 42px;
+        }
+
+        @include grid($only: "xl") {
+            line-height: 44px;
+        }
+
+        @include grid($only: "2xl") {
+            line-height: 46px;
+        }
+    }
+
+    .tab-content__about-step .content-text__title::before {
+        content: counter(countStep);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 48px;
+        font-size: 20px;
+        text-align: center;
+        color: $color-info-tab-content-about-step-text-title-before;
+        background-color: $bg-color-info-tab-content-about-step-text-title-before;
+        border-radius: 50%;
+
+        @include grid($to: "xs") {
+            width: 34px;
+            font-size: 16px;
+        }
+
+        @include grid($only: "sm") {
+            width: 38px;
+            font-size: 17px;
+        }
+
+        @include grid($only: "md") {
+            width: 40px;
+            font-size: 17.5px;
+        }
+
+        @include grid($only: "lg") {
+            width: 42px;
+            font-size: 18px;
+        }
+
+        @include grid($only: "xl") {
+            width: 44px;
+            font-size: 19px;
+        }
+
+        @include grid($only: "2xl") {
+            width: 46px;
+            font-size: 19.5px;
+        }
+    }
+
+    .tab-content__about-aside--left {
+        @include grid($from: "md") {
+            padding-right: 22px;
+        }
+    }
+
+    .tab-content__about-aside--right {
+        @include grid($from: "md") {
+            padding-left: 22px;
+        }
+    }
+
+    /*----*****---- << End about >> ----*****----*/
+
+    /*----*****---- << Facts >> ----*****----*/
+
+    .tab-content__facts-item__icon {
+        @include flexDisplay(flex);
+        @include justifyContent(center);
+        @include alignItems(center);
+        width: 64px;
+        height: 64px;
+        background-color: $bg-color-info-tab-content-facts-item-icon;
+        border-radius: 50%;
+
+        @include grid($to: "xs") {
+            width: 58px;
+            height: 58px;
+        }
+
+        @include grid($only: "sm") {
+            width: 60px;
+            height: 60px;
+        }
+
+        @include grid($only: "md") {
+            width: 62px;
+            height: 62px;
+        }
+
+        @include grid($only: "lg") {
+            width: 62px;
+            height: 62px;
+        }
+    }
+
+    .tab-content__facts-item__icon i {
+        font-size: 22px;
+        color: $color-info-tab-content-facts-item-icon-text;
+
+        @include grid($to: "xs") {
+            font-size: 19px;
+        }
+
+        @include grid($only: "sm") {
+            font-size: 20px;
+        }
+
+        @include grid($only: "md") {
+            font-size: 21px;
+        }
+
+        @include grid($only: "lg") {
+            font-size: 21px;
+        }
+    }
+
+    /*----*****---- << End facts >> ----*****----*/
+
+    /*----*****---- << Gallery header >> ----*****----*/
+
+    .content-gallery__header {
+        position: relative;
+        margin: 40px 0;
+
+        @include grid($to: "xs") {
+            margin: 30px 0;
+        }
+
+        @include grid($only: "sm") {
+            margin: 32px 0;
+        }
+
+        @include grid($only: "md") {
+            margin: 34px 0;
+        }
+
+        @include grid($only: "lg") {
+            margin: 36px 0;
+        }
+
+        @include grid($only: "xl") {
+            margin: 38px 0;
+        }
+    }
+
+    .content-gallery__header-item {
+        display: inline-block;
+        vertical-align: top;
+        padding-left: 0;
+        width: 630px;
+        font-size: 17px;
+    }
+
+    .content-gallery__header-subitem {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        max-width: 210px;
+
+        @include grid($to: "xs") {
+            right: auto;
+            left: 0;
+        }
+
+        /*----*****---- << Gallery header navigation >> ----*****----*/
+
+        .gallery__buttons-btn {
+            @include flexDisplay(inline-flex);
+            @include justifyContent(center);
+            @include alignItems(center);
+            margin-left: 36px;
+            width: 70px;
+            height: 70px;
+            overflow: hidden;
+            border: 2px solid $border-color-info-tab-content-gallery-btn;
+            border-radius: 50%;
+            @include transitionAnim(background-color 0.6s cubic-bezier(0.075, 0.82, 0.165, 1), opacity 0.6s cubic-bezier(0.075, 0.82, 0.165, 1));
+            @include transform(translateZ(0));
+
+            @include grid($to: "xs") {
+                margin-left: 24px;
+                width: 46px;
+                height: 46px;
+                border-width: 1px;
+            }
+
+            @include grid($only: "sm") {
+                margin-left: 26px;
+                width: 50px;
+                height: 50px;
+                border-width: 1px;
+            }
+
+            @include grid($only: "md") {
+                margin-left: 28px;
+                width: 54px;
+                height: 54px;
+            }
+
+            @include grid($only: "lg") {
+                margin-left: 30px;
+                width: 58px;
+                height: 58px;
+            }
+
+            @include grid($only: "xl") {
+                margin-left: 32px;
+                width: 62px;
+                height: 62px;
+            }
+
+            @include grid($only: "2xl") {
+                margin-left: 34px;
+                width: 64px;
+                height: 64px;
+            }
+        }
+
+        .gallery__buttons-btn::before {
+            content: "";
+            position: absolute;
+            top: -1px;
+            right: -1px;
+            bottom: -1px;
+            left: -1px;
+            background-color: $bg-color-info-tab-content-gallery-btn-before;
+            border-radius: 50%;
+            @include transitionAnim(transform 0.6s cubic-bezier(0.075, 0.82, 0.165, 1));
+            @include transform(scaleX(0));
+            @include transformOrigin(center right);
+        }
+
+        .gallery__buttons-btn:hover::before {
+            @include transform(scaleX(1));
+            @include transformOrigin(center left);
+        }
+
+        .gallery__buttons-btn:first-child {
+            margin-left: 0;
+        }
+
+        .gallery__buttons-btn._disabled {
+            pointer-events: none;
+            opacity: 0.5;
+        }
+
+        .gallery__buttons-btn i {
+            position: relative;
+            font-size: 22px;
+            color: $color-info-tab-content-gallery-btn-icon-text;
+            @include transitionAnim(all 0.6s cubic-bezier(0.075, 0.82, 0.165, 1), transform 0.6s cubic-bezier(0.075, 0.82, 0.165, 01));
+
+            @include grid($to: "xs") {
+                font-size: 14px;
+            }
+
+            @include grid($only: "sm") {
+                font-size: 15px;
+            }
+
+            @include grid($only: "md") {
+                font-size: 16px;
+            }
+
+            @include grid($only: "lg") {
+                font-size: 18px;
+            }
+
+            @include grid($only: "xl") {
+                font-size: 19px;
+            }
+
+            @include grid($only: "2xl") {
+                font-size: 20px;
+            }
+        }
+
+        .gallery__buttons-btn:hover i {
+            color: $color-info-tab-content-gallery-btn-hover-icon-text;
+        }
+
+        /*----*****---- << End gallery header navigation >> ----*****----*/
+    }
+
+    /*----*****---- << End gallery header >> ----*****----*/
+
+    /*----*****---- << Gallery slider >> ----*****----*/
+
+    .gallery__slider-item {
+        display: block;
+        margin-right: 3%;
+        width: 31.33333333%;
+        max-width: 630px;
+
+        @include grid($to: "xs") {
+            margin-right: 2.05%;
+            width: 48%;
+        }
+
+        @include grid($only: "sm") {
+            margin-right: 2%;
+            width: 48%;
+        }
+    }
+
+    .gallery__slider-item:first-child {
+        margin-left: 0;
+    }
+
+    .gallery__slider-item:last-child {
+        margin-right: 0;
+    }
+
+    .gallery__slider-item--content {
+        @include boxShadow(0 2px 21px 0 rgba(0, 0, 0, 0.1));
+    }
+
+    .gallery__slider-item--content img {
+        border-radius: 16px;
+    }
+
+    /*----*****---- << End gallery slider >> ----*****----*/
+}
+
+/*----*****---- << End content tabs >> ----*****----*/

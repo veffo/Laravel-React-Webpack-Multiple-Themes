@@ -1,0 +1,31 @@
+/*------------------------------------------------------------------
+
+[Table of contents]
+
+    Align items
+
+-------------------------------------------------------------------*/
+
+/*----*****---- << Align items >> ----*****----*/
+
+@mixin alignItems($align: stretch, $important: null) {
+    -webkit-align-items: $align $important;
+
+    @if($align == "flex-start") {
+        -webkit-box-align: start $important;
+        -moz-box-align: start $important;
+        -ms-flex-align: start $important;
+    } @else if($align == "flex-end") {
+        -webkit-box-align: end $important;
+        -moz-box-align: end $important;
+        -ms-flex-align: end $important;
+    } @else {
+        -webkit-box-align: $align $important;
+        -moz-box-align: $align $important;
+        -ms-flex-align: $align $important;
+    }
+
+    align-items: $align $important;
+}
+
+/*----*****---- << End align items >> ----*****----*/

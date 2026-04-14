@@ -1,0 +1,64 @@
+/*------------------------------------------------------------------
+
+[Table of contents]
+
+    Get the info
+
+-------------------------------------------------------------------*/
+
+/*----*****---- << Get the info >> ----*****----*/
+
+.c-gti {
+    margin-left: auto;
+
+    @include grid($to: "sm") {
+        display: none;
+    }
+}
+
+.gti__btn {
+    margin: 0;
+    padding: 16px 32px;
+    font-size: 16px;
+    line-height: 1;
+    letter-spacing: 0.3px;
+    color: $color-headerMenu-getTheInfo-btn;
+    background-color: transparent;
+    border: 2px solid $border-color-headerMenu-getTheInfo-btn;
+    border-radius: 8px;
+    @include transitionAnim(color 0.3s ease-in-out, background-color 0.3s ease-in-out);
+
+    @include grid($from: "md", $to: "lg") {
+        padding: 15px 26px;
+        font-size: 14px;
+        border-width: 1px;
+    }
+
+    @include grid($from: "xl", $to: "3xl") {
+        padding: 16px 29px;
+        font-size: 15px;
+    }
+}
+
+.gti__btn:hover,
+.gti__btn:first-child:active {
+    color: $color-headerMenu-getTheInfo-btn-hover;
+    background-color: $bg-color-headerMenu-getTheInfo-btn-hover;
+    border-color: $border-color-headerMenu-getTheInfo-btn-hover;
+}
+
+.c-headerMenu.is-sticky .gti__btn {
+    background-color: $bg-color-headerMenu-sticky-getTheInfo-btn;
+    border: 2px solid transparent;
+
+    @include grid($from: "md", $to: "lg") {
+        border-width: 1px;
+    }
+}
+
+.c-headerMenu.is-sticky .gti__btn:hover {
+    color: $color-headerMenu-sticky-getTheInfo-btn-hover;
+    background-color: $bg-color-headerMenu-sticky-getTheInfo-btn-hover;
+}
+
+/*----*****---- << End get the info >> ----*****----*/

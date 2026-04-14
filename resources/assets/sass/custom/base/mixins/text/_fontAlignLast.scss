@@ -1,0 +1,17 @@
+/*------------------------------------------------------------------
+
+[Table of contents]
+
+    Font align last
+
+-------------------------------------------------------------------*/
+
+/*----*****---- << Font align last >> ----*****----*/
+
+@mixin fontAlignLast($value) {
+    -moz-text-align-last: $value;
+    -ms-text-align-last: $value;
+    text-align-last: $value;
+}
+
+/*----*****---- << End font align last >> ----*****----*/

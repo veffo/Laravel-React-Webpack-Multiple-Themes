@@ -1,0 +1,92 @@
+/*------------------------------------------------------------------
+
+[Table of contents]
+
+    Mobile toggle
+
+-------------------------------------------------------------------*/
+
+/*----*****---- << Mobile toggle >> ----*****----*/
+
+.c-mobile__toggle {
+    position: absolute;
+    display: none;
+    top: 0;
+    right: 7.5px;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+
+    @include grid($to: "xs") {
+        width: 22px;
+        height: 22px;
+    }
+
+    @include grid($to: "sm") {
+        display: block;
+    }
+}
+
+.c-mobile__toggle span {
+    position: absolute;
+    top: 50%;
+    width: 22px;
+    height: 2px;
+    background-color: $bg-color-headerMenu-mobileToggle-span;
+    @include transitionAnim(background-color 0.2s ease-in-out);
+
+    @include grid($to: "xs") {
+        width: 20px;
+    }
+}
+
+.c-mobile__toggle span::before,
+.c-mobile__toggle span::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: $bg-color-headerMenu-mobileToggle-before-after;
+    @include transitionDuration(0.2s, 0.2s);
+    @include transitionDelay(0.2s, 0s);
+}
+
+.c-mobile__toggle span::before {
+    top: -8px;
+    @include transitionProperty(top, transform);
+
+    @include grid($to: "xs") {
+        top: -7px;
+    }
+}
+
+.c-mobile__toggle span::after {
+    bottom: -8px;
+    @include transitionProperty(bottom, transform);
+
+    @include grid($to: "xs") {
+        bottom: -7px;
+    }
+}
+
+/* is clicked */
+.c-mobile__toggle.is-clicked span {
+    background-color: $bg-color-headerMenu-mobileToggle-clicked-span;
+}
+
+.c-mobile__toggle.is-clicked span::before,
+.c-mobile__toggle.is-clicked span::after {
+    @include transitionDelay(0s, 0.2s);
+}
+
+.c-mobile__toggle.is-clicked span::before {
+    top: 0;
+    @include transform(rotate(45deg));
+}
+
+.c-mobile__toggle.is-clicked span::after {
+    bottom: 0;
+    @include transform(rotate(-45deg));
+}
+
+/*----*****---- << End mobile toggle >> ----*****----*/

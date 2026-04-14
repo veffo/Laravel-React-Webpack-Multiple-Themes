@@ -1,0 +1,50 @@
+/*------------------------------------------------------------------
+
+[Table of contents]
+
+    Logo
+
+-------------------------------------------------------------------*/
+
+/*----*****---- << Logo >> ----*****----*/
+
+.c-logo {
+    @include alignContent(center);
+    height: 100%;
+    line-height: 1;
+    @include transform(translate(4px, -2px));
+
+    @include grid($to: "xs") {
+        @include transform(translate(0px, -1px));
+    }
+
+    @include grid($to: "sm") {
+        @include alignContent(initial);
+    }
+
+    @include grid($from: "md", $to: "lg") {
+        @include transform(translate(2px, 0px));
+    }
+
+    @include grid($from: "xl", $to: "3xl") {
+        @include transform(translate(3px, -1px));
+    }
+
+    .logo__img {
+        width: 90px;
+
+        @include grid($to: "xs") {
+            width: 80px;
+        }
+
+        @include grid($from: "md", $to: "lg") {
+            width: 80px;
+        }
+
+        @include grid($from: "xl", $to: "3xl") {
+            width: 85px;
+        }
+    }
+}
+
+/*----*****---- << End logo >> ----*****----*/

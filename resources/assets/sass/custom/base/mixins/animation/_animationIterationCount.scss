@@ -1,0 +1,19 @@
+/*------------------------------------------------------------------
+
+[Table of contents]
+
+    Animation iteration count
+
+-------------------------------------------------------------------*/
+
+/*----*****---- << Animation iteration count >> ----*****----*/
+
+@mixin animationIterationCount($value) {
+    -webkit-animation-iteration-count: $value;
+    -moz-animation-iteration-count: $value;
+    -ms-animation-iteration-count: $value;
+    -o-animation-iteration-count: $value;
+    animation-iteration-count: $value;
+}
+
+/*----*****---- << End animation iteration count >> ----*****----*/

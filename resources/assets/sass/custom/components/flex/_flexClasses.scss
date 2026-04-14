@@ -1,0 +1,52 @@
+/*------------------------------------------------------------------
+
+[Table of contents]
+
+    Flex classes
+
+-------------------------------------------------------------------*/
+
+/*----*****---- << Flex classes >> ----*****----*/
+
+.flex-root {
+    @include flex(1, 1, 0, !important);
+}
+
+.flex-row-auto {
+    @include flex(0, 0, auto, !important);
+}
+
+.flex-row-fluid {
+    @include flex(1, 1, auto, !important);
+    min-width: 0;
+}
+
+.flex-column-auto {
+    @include flex(0, 0, auto, !important);
+}
+
+.flex-column-fluid {
+    @include flex(1, 0, auto, !important);
+}
+
+.flex-center {
+    @include justifyContent(center, !important);
+    @include alignItems(center, !important);
+}
+
+.flex-start {
+    @include justifyContent(start, !important);
+    @include alignItems(start, !important);
+}
+
+.flex-end {
+    @include justifyContent(flex-end, !important);
+    @include alignItems(flex-end, !important);
+}
+
+.flex-stack {
+    @include justifyContent(space-between, !important);
+    @include alignItems(center, !important);
+}
+
+/*----*****---- << End flex classes >> ----*****----*/

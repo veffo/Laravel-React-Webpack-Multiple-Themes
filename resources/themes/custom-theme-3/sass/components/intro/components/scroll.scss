@@ -1,0 +1,27 @@
+/*------------------------------------------------------------------
+
+[Table of contents]
+
+    Scroll
+
+-------------------------------------------------------------------*/
+
+/*----*****---- << Scroll >> ----*****----*/
+
+.c-scroll {
+    position: absolute;
+    z-index: 2;
+    right: 42px;
+    bottom: 42px;
+    opacity: 0;
+    @include transitionAnim(opacity 0.6s cubic-bezier(0.28, 0.12, 0.22, 1));
+    @include transitionProperty(opacity, transform);
+    @include transform(translate(0, 100%));
+}
+
+.scroll__icon {
+    font-size: 22px;
+    color: $color-intro-scroll;
+}
+
+/*----*****---- << End scroll >> ----*****----*/

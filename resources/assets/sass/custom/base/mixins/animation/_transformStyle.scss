@@ -1,0 +1,19 @@
+/*------------------------------------------------------------------
+
+[Table of contents]
+
+    Transform style
+
+-------------------------------------------------------------------*/
+
+/*----*****---- << Transform style >> ----*****----*/
+
+@mixin transformStyle($value) {
+    -webkit-transform-style: $value;
+    -moz-transform-style: $value;
+    -ms-transform-style: $value;
+    -o-transform-style: $value;
+    transform-style: $value;
+}
+
+/*----*****---- << End transform style >> ----*****----*/

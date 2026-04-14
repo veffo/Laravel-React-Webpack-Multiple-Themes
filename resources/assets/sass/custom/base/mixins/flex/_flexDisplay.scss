@@ -1,0 +1,29 @@
+/*------------------------------------------------------------------
+
+[Table of contents]
+
+    Flex display
+
+-------------------------------------------------------------------*/
+
+/*----*****---- << Flex display >> ----*****----*/
+
+@mixin flexDisplay($display, $important: null) {
+    @if($display == "inline-flex") {
+        display: -webkit-inline-box $important;
+        display: -webkit-inline-flex $important;
+        display: -moz-inline-box $important;
+        display: -ms-inline-flexbox $important;
+        display: inline-flex $important;
+    } @else {
+        display: -webkit-box $important;
+        display: -webkit-flex $important;
+        display: -moz-box $important;
+        display: -ms-flexbox $important;
+        display: flex $important;
+    }
+
+    width: 100%;
+}
+
+/*----*****---- << End flex display >> ----*****----*/

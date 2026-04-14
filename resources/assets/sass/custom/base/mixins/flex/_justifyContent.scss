@@ -1,0 +1,37 @@
+/*------------------------------------------------------------------
+
+[Table of contents]
+
+    Justify content
+
+-------------------------------------------------------------------*/
+
+/*----*****---- << Justify content >> ----*****----*/
+
+@mixin justifyContent($content: flex-start, $important: null) {
+    -webkit-justify-content: $content $important;
+
+    @if($content == "flex-start") {
+        -webkit-box-pack: start $important;
+        -moz-box-pack: start $important;
+        -ms-flex-pack: start $important;
+    } @else if($content == "flex-end") {
+        -webkit-box-pack: end $important;
+        -moz-box-pack: end $important;
+        -ms-flex-pack: end $important;
+    } @else if($content == "space-between") {
+        -webkit-box-pack: justify $important;
+        -moz-box-pack: justify $important;
+        -ms-flex-pack: justify $important;
+    } @else if($content == "space-around") {
+        -ms-flex-pack: distribute $important;
+    } @else {
+        -webkit-box-pack: $content $important;
+        -moz-box-pack: $content $important;
+        -ms-flex-pack: $content $important;
+    }
+
+    justify-content: $content $important;
+}
+
+/*----*****---- << End justify content >> ----*****----*/

@@ -1,0 +1,19 @@
+/*------------------------------------------------------------------
+
+[Table of contents]
+
+    Animation timing function
+
+-------------------------------------------------------------------*/
+
+/*----*****---- << Animation timing function >> ----*****----*/
+
+@mixin animationTimingFunction($value) {
+    -webkit-animation-timing-function: $value;
+    -moz-animation-timing-function: $value;
+    -ms-animation-timing-function: $value;
+    -o-animation-timing-function: $value;
+    animation-timing-function: $value;
+}
+
+/*----*****---- << End animation timing function >> ----*****----*/

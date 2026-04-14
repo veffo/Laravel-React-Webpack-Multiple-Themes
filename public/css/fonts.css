@@ -1,0 +1,43 @@
+/*----*****---- << App sans >> ----*****----*/
+
+@font-face {
+    font-family: "AppSans";
+    font-style: normal;
+    font-weight: 300;
+    src: url("../fonts/AppSans/AppSans300.eot");
+    src: url("../fonts/AppSans/AppSans300.eot?#iefix") format("embedded-opentype"),
+         url("../fonts/AppSans/AppSans300.woff") format("woff"),
+         url("../fonts/AppSans/AppSans300.ttf") format("truetype")
+}
+
+@font-face {
+    font-family: "AppSans";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/AppSans/AppSans400.eot");
+    src: url("../fonts/AppSans/AppSans400.eot?#iefix") format("embedded-opentype"),
+         url("../fonts/AppSans/AppSans400.woff") format("woff"),
+         url("../fonts/AppSans/AppSans400.ttf") format("truetype")
+}
+
+@font-face {
+    font-family: "AppSans";
+    font-style: normal;
+    font-weight: 500;
+    src: url("../fonts/AppSans/AppSans500.eot");
+    src: url("../fonts/AppSans/AppSans500.eot?#iefix") format("embedded-opentype"),
+         url("../fonts/AppSans/AppSans500.woff") format("woff"),
+         url("../fonts/AppSans/AppSans500.ttf") format("truetype")
+}
+
+@font-face {
+    font-family: "AppSans";
+    font-style: normal;
+    font-weight: 700;
+    src: url("../fonts/AppSans/AppSans700.eot");
+    src: url("../fonts/AppSans/AppSans700.eot?#iefix") format("embedded-opentype"),
+         url("../fonts/AppSans/AppSans700.woff") format("woff"),
+         url("../fonts/AppSans/AppSans700.ttf") format("truetype")
+}
+
+/*----*****---- << End app sans >> ----*****----*/

@@ -1,0 +1,17 @@
+/*------------------------------------------------------------------
+
+[Table of contents]
+
+    Text decoration color
+
+-------------------------------------------------------------------*/
+
+/*----*****---- << Text decoration color >> ----*****----*/
+
+@mixin textDecorationColor($value) {
+    -webkit-text-decoration-color: $value;
+    -moz-text-decoration-color: $value;
+    text-decoration-color: $value;
+}
+
+/*----*****---- << End text decoration color >> ----*****----*/

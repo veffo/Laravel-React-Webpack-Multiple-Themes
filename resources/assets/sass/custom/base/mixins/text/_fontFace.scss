@@ -1,0 +1,34 @@
+/*------------------------------------------------------------------
+
+[Table of contents]
+
+    Font face
+
+-------------------------------------------------------------------*/
+
+/*----*****---- << Font face >> ----*****----*/
+
+@mixin fontFace($style: normal, $weight: 400, $fontFamily, $fontUrl, $fontName, $urlFormat: null) {
+	@font-face {
+        font: {
+            style: $style;
+            weight: $weight;
+            family: "#{$fontFamily}";
+        }
+
+        @if($urlFormat != null) {
+            src: url($fontUrl + "/" + $fontName) format(#{$urlFormat});
+        } @else {
+            src: url($fontUrl + "/" + $fontName);
+        }
+	}
+}
+
+// @include fontFace(normal, 300, "AppFont", "/fonts", "webfont-light.eot");
+// @include fontFace(normal, 300, "AppFont", "/fonts", "webfont-light.eot?#iefix", "embedded-opentype");
+// @include fontFace(italic, 600, "AppFont", "/fonts", "webfont-italic.woff2", "woff2");
+// @include fontFace(normal, 600, "AppFont", "/fonts", "webfont-regular.woff", "woff");
+// @include fontFace(bold, 700, "AppFont", "/fonts", "webfont-bold.ttf", "truetype");
+// @include fontFace(bold, 700, "AppFont", "/fonts/webfont-bold.svg#webfont-bold", "svg");
+
+/*----*****---- << End font face >> ----*****----*/

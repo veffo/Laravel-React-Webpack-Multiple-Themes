@@ -1,0 +1,43 @@
+/*------------------------------------------------------------------
+
+[Table of contents]
+
+    Cycle for
+
+-------------------------------------------------------------------*/
+
+/*----*****---- << Cycle for >> ----*****----*/
+
+@for $i from 1 through 3 {// all numbers
+    .col-xs-#{$i} {
+        width: $i * 2em;
+    }
+}
+
+.col-xs-1 {
+    width: 2em;
+}
+
+.col-xs-2 {
+    width: 4em;
+}
+
+.col-xs-3 {
+    width: 6em;
+}
+
+@for $i from 1 to 3 {// except last number
+    .col-xs-#{$i} {
+        width: $i * 2em;
+    }
+}
+
+.col-xs-1 {
+    width: 2em;
+}
+
+.col-xs-2 {
+    width: 4em;
+}
+
+/*----*****---- << End cycle for >> ----*****----*/

@@ -1,0 +1,17 @@
+/*------------------------------------------------------------------
+
+[Table of contents]
+
+    Perspective
+
+-------------------------------------------------------------------*/
+
+/*----*****---- << Perspective >> ----*****----*/
+
+@mixin perspective($value) {
+    -webkit-perspective: $value;
+    -moz-perspective: $value;
+    perspective: $value;
+}
+
+/*----*****---- << End perspective >> ----*****----*/

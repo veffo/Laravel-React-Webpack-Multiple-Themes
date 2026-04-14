@@ -1,0 +1,17 @@
+/*------------------------------------------------------------------
+
+[Table of contents]
+
+    Column fill
+
+-------------------------------------------------------------------*/
+
+/*----*****---- << Column fill >> ----*****----*/
+
+@mixin columnFill($value) {
+    -webkit-column-fill: $value;
+    -moz-column-fill: $value;
+    column-fill: $value;
+}
+
+/*----*****---- << End column fill >> ----*****----*/

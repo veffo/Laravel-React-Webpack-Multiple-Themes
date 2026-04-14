@@ -1,0 +1,25 @@
+/*------------------------------------------------------------------
+
+[Table of contents]
+
+    Align self
+
+-------------------------------------------------------------------*/
+
+/*----*****---- << Align self >> ----*****----*/
+
+@mixin alignSelf($self: auto, $important: null) {
+    -webkit-align-self: $self $important;
+
+    @if($self == "flex-start") {
+        -ms-flex-item-align: start $important;
+    } @else if($self == "flex-end") {
+        -ms-flex-item-align: end $important;
+    } @else {
+        -ms-flex-item-align: $self $important;
+    }
+
+    align-self: $self $important;
+}
+
+/*----*****---- << End align self >> ----*****----*/

@@ -1,0 +1,43 @@
+/*------------------------------------------------------------------
+
+[Table of contents]
+
+    Contact
+
+-------------------------------------------------------------------*/
+
+/*----*****---- << Contact >> ----*****----*/
+
+.footer__contact {
+    margin-bottom: 30px;
+
+    @include grid($to: "xs") {
+        margin-bottom: 25px;
+    }
+}
+
+.footer__contact-subtitle {
+    margin-bottom: 3px;
+    font-weight: 700;
+    color: $color-footer-contact-subtitle;
+}
+
+.footer__contact-link {
+    @include transitionAnim(all 0.3s ease-in-out);
+}
+
+.footer__contact-link:hover {
+    color: $color-footer-contact-link-hover;
+}
+
+.footer__contact-subtitle._down {
+    @include grid($to: "xs") {
+        margin-bottom: 10px;
+    }
+}
+
+.footer__contact-address {
+    display: block;
+}
+
+/*----*****---- << End contact >> ----*****----*/

@@ -1,0 +1,89 @@
+/*------------------------------------------------------------------
+
+[Table of contents]
+
+    Custom WOW animation
+
+-------------------------------------------------------------------*/
+
+/*----*****---- << Custom WOW animation >> ----*****----*/
+
+@include keyframes(fadeInSmall) {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.fadeInSmall {
+    animation-name: fadeInSmall;
+}
+
+@include keyframes(fadeInUpSmall) {
+    0% {
+        opacity: 0;
+        @include transform(translate3d(0, 30px, 0));
+    }
+
+    100% {
+        opacity: 1;
+        @include transform(none);
+    }
+}
+
+.fadeInUpSmall {
+    animation-name: fadeInUpSmall;
+}
+
+@include keyframes(fadeInDownSmall) {
+    0% {
+        opacity: 0;
+        @include transform(translate3d(0, -30px, 0));
+    }
+
+    100% {
+        opacity: 1;
+        @include transform(none);
+    }
+}
+
+.fadeInDownSmall {
+    animation-name: fadeInDownSmall;
+}
+
+@include keyframes(fadeInLeftSmall) {
+    0% {
+        opacity: 0;
+        @include transform(translate3d(-30px, 0, 0));
+    }
+
+    100% {
+        opacity: 1;
+        @include transform(none);
+    }
+}
+
+.fadeInLeftSmall {
+    animation-name: fadeInLeftSmall;
+}
+
+@include keyframes(fadeInRightSmall) {
+    0% {
+        opacity: 0;
+        @include transform(translate3d(30px, 0, 0));
+    }
+
+    100% {
+        opacity: 1;
+        @include transform(none);
+    }
+}
+
+.fadeInRightSmall {
+    animation-name: fadeInRightSmall;
+}
+
+/*----*****---- << end custom WOW animation >> ----*****----*/

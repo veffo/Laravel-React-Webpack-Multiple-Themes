@@ -1,0 +1,19 @@
+/*------------------------------------------------------------------
+
+[Table of contents]
+
+    Font kering
+
+-------------------------------------------------------------------*/
+
+/*----*****---- << Font kering >> ----*****----*/
+
+@mixin fontKering($valueWebKit, $font: null) {
+    -webkit-font-kering: $value;
+
+    @if($font != null) {
+        font-kering: $font;
+    }
+}
+
+/*----*****---- << End font kering >> ----*****----*/

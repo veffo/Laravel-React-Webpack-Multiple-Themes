@@ -1,0 +1,19 @@
+/*------------------------------------------------------------------
+
+[Table of contents]
+
+    Transition property
+
+-------------------------------------------------------------------*/
+
+/*----*****---- << Transition property >> ----*****----*/
+
+@mixin transitionProperty($value...) {
+    -webkit-transition-property: $value;
+    -moz-transition-property: $value;
+    -ms-transition-property: $value;
+    -o-transition-property: $value;
+    transition-property: $value;
+}
+
+/*----*****---- << End transition property >> ----*****----*/

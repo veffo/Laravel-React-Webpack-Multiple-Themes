@@ -1,6 +1,6 @@
 <p align="center">
     <a href="#">
-        <img width="150" src="https://github.com/veffo/Laravel-React-Webpack-Multiple-Themes/blob/main/_assets/media/logo.png" alt="logo" />
+        <img width="150" src="https://raw.githubusercontent.com/veffo/Laravel-React-Webpack-Multiple-Themes/main/_assets/media/logo.png" alt="logo" />
     </a>
 </p>
 
@@ -143,7 +143,7 @@ By leveraging custom Webpack logic, it guarantees that changes in one theme neve
 
 <p>
     <a href="#">
-        <img src="https://github.com/veffo/Laravel-React-Webpack-Multiple-Themes/blob/main/_assets/media/demo.webp" alt="demo" />
+        <img src="https://raw.githubusercontent.com/veffo/Laravel-React-Webpack-Multiple-Themes/main/_assets/media/demo.webp" alt="demo" />
     </a>
 </p>
 

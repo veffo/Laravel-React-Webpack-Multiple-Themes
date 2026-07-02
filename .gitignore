@@ -1,15 +1,26 @@
-/node_modules
-/public/hot
-/public/storage
-/storage/*.key
-/vendor
+# Ignore project files
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+
+# Local History for Visual Studio Code
+.history/
+
+# Built Visual Studio Code Extensions
+*.vsix
+
+# Dependencies
+node_modules
+vendor
+
+# Configuration files
 .env
 .env.backup
-.phpunit.result.cache
-docker-compose.override.yml
-Homestead.json
-Homestead.yaml
-npm-debug.log
-yarn-error.log
-/.idea
-/.vscode
+.env.production
+
+# Logs files
+logs
+*.log
